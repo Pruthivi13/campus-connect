@@ -1,0 +1,45 @@
+{
+    "schedule": {
+        "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "openTime": "07:00",
+        "closeTime": "19:00",
+        "timezone": "Asia/Kolkata"
+    },
+    "holidays": [
+        {
+            "date": "2025-01-01",
+            "name": "New Year's Day"
+        },
+        {
+            "date": "2025-01-26",
+            "name": "Republic Day"
+        },
+        {
+            "date": "2025-03-14",
+            "name": "Holi"
+        },
+        {
+            "date": "2025-08-15",
+            "name": "Independence Day"
+        },
+        {
+            "date": "2025-10-02",
+            "name": "Gandhi Jayanti"
+        },
+        {
+            "date": "2025-10-20",
+            "name": "Diwali"
+        },
+        {
+            "date": "2025-12-25",
+            "name": "Christmas"
+        }
+    ]
+}

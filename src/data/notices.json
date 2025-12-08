@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "text": "Placement Drive by Infosys on November 2025",
+        "date": "2025-11-15",
+        "type": "placement"
+    },
+    {
+        "id": 2,
+        "text": "Semester 5 Results Announced - Check Student Portal",
+        "date": "2025-10-20",
+        "type": "academic"
+    },
+    {
+        "id": 3,
+        "text": "Campus Closed for Winter Break starting Dec 24th",
+        "date": "2025-12-01",
+        "type": "admin"
+    },
+    {
+        "id": 4,
+        "text": "Guest Lecture on AI by Dr. Smith this Friday",
+        "date": "2025-12-10",
+        "type": "event"
+    }
+]
