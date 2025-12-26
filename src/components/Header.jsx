@@ -72,8 +72,12 @@ const Header = () => {
         {/* Unified Navigation Bar */}
         <div className="flex justify-between items-center mb-10">
           {/* Logo - Brand Element */}
-          <div className="flex-shrink-0">
-            <img src="/logo.png" alt="Campus Connect Logo" className="h-32 w-auto" />
+          <div className="flex-shrink-0 flex items-center h-full">
+            <img
+              src={theme === 'dark' ? "/logo-dark.png" : "/logo.png"}
+              alt="Campus Connect Logo"
+              className="h-32 w-auto object-contain translate-y-5"
+            />
           </div>
 
           {/* Navigation - Center */}
