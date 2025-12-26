@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Manrope', 'sans-serif';
+    --font-sans: 'Manrope', 'sans-serif';
 }
 
 @variant dark (&:where(.dark, .dark *));
 
 body {
-  font-family: var(--font-sans);
+    font-family: var(--font-sans);
 }

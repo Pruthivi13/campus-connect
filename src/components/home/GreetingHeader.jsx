@@ -8,7 +8,7 @@ const GreetingHeader = () => {
     const updateGreeting = () => {
       const now = new Date();
       const hour = now.getHours();
-      
+
       if (hour < 12) setGreeting('Good Morning');
       else if (hour < 18) setGreeting('Good Afternoon');
       else setGreeting('Good Evening');
