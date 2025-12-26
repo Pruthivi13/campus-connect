@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen transition-colors duration-300">
       <Header />
-      <main className="flex-grow bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <main className="flex-grow bg-gray-50 dark:bg-gradient-to-b dark:from-black dark:via-green-900 dark:to-black transition-colors duration-300">
         {children}
       </main>
       <Footer />
