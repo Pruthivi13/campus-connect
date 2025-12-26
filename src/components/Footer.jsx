@@ -7,21 +7,20 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Column 1: Logo and Description */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
-                 <img src="/svgs/logo.svg" alt="Logo" className="h-6 w-6 brightness-0 invert-0 dark:invert" />
-              </div>
-              <h2 className="text-xl font-bold tracking-tight text-black dark:text-white">Campus Connect</h2>
-            </div>
-            <p className="text-sm text-black dark:text-gray-200 leading-relaxed font-medium">
+          <div className="flex flex-col items-start h-full">
+            <img
+              src="/logo-dark.png"
+              alt="Campus Connect Logo"
+              className="h-48 w-auto object-contain"
+            />
+            <p className="text-sm text-green-100 max-w-xs -mt-23 pl-2">
               Your ultimate campus resource finder
             </p>
           </div>
 
           {/* Column 2: About */}
           <div>
-            <h3 className="font-bold mb-6 text-black dark:text-white text-lg">About Campus Resource Finder</h3>
+            <h3 className="font-bold mb-6 text-black dark:text-white text-lg">About Campus Connect</h3>
             <p className="text-sm text-black dark:text-gray-200 leading-relaxed font-medium">
               Your one-stop portal for accessing academic resources, notices, and campus information.
             </p>
@@ -48,15 +47,15 @@ const Footer = () => {
                 <span>mail.to.pruthivi@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
-                 <div className="bg-black/10 dark:bg-white/10 p-2 rounded-full">
-                   <img src="/svgs/call small.svg" alt="Phone" className="h-3.5 w-3.5 brightness-0 dark:invert" />
-                 </div>
+                <div className="bg-black/10 dark:bg-white/10 p-2 rounded-full">
+                  <img src="/svgs/call small.svg" alt="Phone" className="h-3.5 w-3.5 brightness-0 dark:invert" />
+                </div>
                 <span>9337005825</span>
               </li>
               <li className="flex items-center gap-3">
-                 <div className="bg-black/10 dark:bg-white/10 p-2 rounded-full">
-                   <img src="/svgs/location.svg" alt="Location" className="h-3.5 w-3.5 brightness-0 dark:invert" />
-                 </div>
+                <div className="bg-black/10 dark:bg-white/10 p-2 rounded-full">
+                  <img src="/svgs/location.svg" alt="Location" className="h-3.5 w-3.5 brightness-0 dark:invert" />
+                </div>
                 <span>Campus Address, City</span>
               </li>
             </ul>
@@ -64,7 +63,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-black/10 dark:border-gray-800 pt-8 text-center text-xs font-semibold text-black dark:text-gray-300">
-          © 2025 Campus Resource Finder. All rights reserved.
+          © 2025 Campus Connect. All rights reserved.
         </div>
       </div>
     </footer>
