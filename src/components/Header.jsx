@@ -15,7 +15,7 @@ const Header = () => {
     { name: 'Resources', icon: '/svgs/resouces.svg', path: '/resources' },
     { name: 'Notice Board', icon: '/svgs/notice.svg', path: '/notices' },
     { name: 'Campus Map', icon: '/svgs/map.svg', path: '/map' },
-    { name: 'About Us', icon: '/svgs/call small.svg', path: '/about' },
+    { name: 'About Us', icon: '/svgs/person.svg', path: '/about' },
   ];
 
   const isActive = (path) => {
@@ -68,15 +68,37 @@ const Header = () => {
     <div className="relative bg-gradient-to-r from-green-300 via-white to-green-300 dark:from-green-900 dark:via-green-900 dark:to-green-800 transition-colors duration-300">
       <div className="container mx-auto px-6 pt-6 pb-24 relative z-20">
 
-        {/* Top Bar */}
+
+        {/* Unified Navigation Bar */}
         <div className="flex justify-between items-center mb-10">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
-              <img src="/svgs/logo.svg" alt="Campus Connect" className="h-8 w-8 brightness-0 dark:invert" />
-            </div>
-            <h1 className="text-2xl font-bold text-black dark:text-white tracking-tight">Campus Connect</h1>
+          {/* Logo - Brand Element */}
+          <div className="flex-shrink-0">
+            <img src="/logo.png" alt="Campus Connect Logo" className="h-32 w-auto" />
           </div>
+
+          {/* Navigation - Center */}
+          <nav className="flex-1 flex justify-center">
+            <ul className="flex items-center gap-1 bg-white/10 backdrop-blur-md p-1 rounded-full">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive(item.path)
+                      ? 'bg-white text-green-600 shadow-sm'
+                      : 'text-black hover:bg-black/10 dark:text-white dark:hover:bg-white/10'
+                      }`}
+                  >
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      className={`h-4 w-4 ${isActive(item.path) ? '' : 'brightness-0 dark:invert'}`}
+                    />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           {/* Right Actions */}
           <div className="flex items-center gap-6">
@@ -106,30 +128,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-
-        {/* Navigation - Centered */}
-        <nav className="flex justify-center mb-12">
-          <ul className="flex items-center gap-1 bg-white/10 backdrop-blur-md p-1 rounded-full">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive(item.path)
-                    ? 'bg-white text-green-600 shadow-sm'
-                    : 'text-black hover:bg-black/10 dark:text-white dark:hover:bg-white/10'
-                    }`}
-                >
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    className={`h-4 w-4 ${isActive(item.path) ? '' : 'brightness-0 dark:invert'}`}
-                  />
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
 
         {/* Search Bar - INSIDE Gradient */}
         <div className="flex justify-center mb-8">
