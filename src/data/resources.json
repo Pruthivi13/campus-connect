@@ -1,0 +1,392 @@
+[
+    {
+        "id": 1,
+        "title": "Data Structures & Algorithms Notes",
+        "subject": "Computer Science",
+        "semester": "Sem 3",
+        "type": "PDF",
+        "author": "Prof. Alan Turing",
+        "date": "2025-11-10",
+        "downloadLink": "#"
+    },
+    {
+        "id": 2,
+        "title": "Operating Systems Previous Year Papers",
+        "subject": "Computer Science",
+        "semester": "Sem 4",
+        "type": "Paper",
+        "author": "Exam Cell",
+        "date": "2025-10-05",
+        "downloadLink": "#"
+    },
+    {
+        "id": 3,
+        "title": "Introduction to AI - Video Lecture",
+        "subject": "Artificial Intelligence",
+        "semester": "Sem 6",
+        "type": "Video",
+        "author": "Dr. Andrew Ng",
+        "date": "2025-12-01",
+        "downloadLink": "#"
+    },
+    {
+        "id": 4,
+        "title": "Physics Lab Manual - Sem 1",
+        "subject": "Physics",
+        "semester": "Sem 1",
+        "type": "PDF",
+        "author": "Department of Physics",
+        "date": "2025-08-20",
+        "downloadLink": "#"
+    },
+    {
+        "id": 5,
+        "title": "Calculus II Syllabus",
+        "subject": "Mathematics",
+        "semester": "Sem 2",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "#"
+    },
+    {
+        "id": 6,
+        "title": "Database Management Systems - Cheatsheet",
+        "subject": "Computer Science",
+        "semester": "Sem 4",
+        "type": "PDF",
+        "author": "Student Council",
+        "date": "2025-11-25",
+        "downloadLink": "#"
+    },
+    {
+        "id": 7,
+        "title": "Engineering Mechanics - Lecture Slides",
+        "subject": "Mechanical Engineering",
+        "semester": "Sem 2",
+        "type": "PDF",
+        "author": "Prof. Newton",
+        "date": "2025-09-10",
+        "downloadLink": "#"
+    },
+    {
+        "id": 8,
+        "title": "Digital Logic Design - Lab Experiments",
+        "subject": "Electronics",
+        "semester": "Sem 3",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "#"
+    },
+    {
+        "id": 9,
+        "title": "Calculus I Syllabus",
+        "subject": "Mathematics",
+        "semester": "Sem 1",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1EqhQWjI7B_3g87W5GifzP-_Z0zXBVzsR?usp=drive_link"
+    },
+    {
+        "id": 10,
+        "title": "Critical Thinking And Communication",
+        "subject": "Mathematics",
+        "semester": "Sem 1",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/155H8Noe2y2I6doCza_tWEjlYEVyMdM8x?usp=drive_link"
+    },
+    {
+        "id": 11,
+        "title": "Direct Mathematics",
+        "subject": "Mathematics",
+        "semester": "Sem 1",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1kE_WwGe467PXQNl6bhMY9y7liTGvCs9R?usp=drive_link"
+    },
+    {
+        "id": 12,
+        "title": "Introduction to Computer Programming",
+        "subject": "Computer Science",
+        "semester": "Sem 1",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1J_UZALtVT8SRrqgR2bpOlVCHBX9uLv9X?usp=drive_link"
+    },
+    {
+        "id": 13,
+        "title": "University Physics and Mechanics",
+        "subject": "Physics",
+        "semester": "Sem 1",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1g1NF_sYF1E0YV3UvXFa_Dnk9MtmxYaN4?usp=drive_link"
+    },
+    {
+        "id": 14,
+        "title": "Introduction to Graph Theory",
+        "subject": "Mathematics",
+        "semester": "Sem 2",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1nBp15w1dp4e-buZiQKc0TSwvMlxHfUxI?usp=drive_link"
+    },
+    {
+        "id": 15,
+        "title": "Principles of Microeconomics",
+        "subject": "Economics",
+        "semester": "Sem 2",
+        "type": "PDF",
+        "author": "General",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1oX965K8YLyHVUPxt5-rBNQibmjrvmjPW?usp=drive_link"
+    },
+    {
+        "id": 16,
+        "title": "University Physics and Mechanics 2",
+        "subject": "Physics",
+        "semester": "Sem 2",
+        "type": "Syllabus",
+        "author": "Dean of Academics",
+        "date": "2025-07-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1Dyhn4_hJbLK6ACJjPaXgzQDc9upLFqMO?usp=drive_link"
+    },
+    {
+        "id": 17,
+        "title": "Algorithm Design 1",
+        "subject": "Electronics",
+        "semester": "Sem 3",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1CcYNKlfjxwsGnbxtt4MsoNeTCJ6PGegr?usp=drive_link"
+    },
+    {
+        "id": 18,
+        "title": "Computer Science Workshop",
+        "subject": "Computer Science",
+        "semester": "Sem 3",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1YEEb06kySr_lN1TchqBeDvhiPM72EFp2?usp=drive_link"
+    },
+    {
+        "id": 19,
+        "title": "Principles of Macroeconomics",
+        "subject": "Economics",
+        "semester": "Sem 3",
+        "type": "PDF",
+        "author": "General",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1wR7utMyj4-XeG8I6wKm38C0g4_fh_7mD?usp=drive_link"
+    },
+    {
+        "id": 20,
+        "title": "Probability Statistics",
+        "subject": "Mathematics",
+        "semester": "Sem 3",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1EC9SoHcYfzTRh4IR-FvuSXLxwA0z_xu7?usp=drive_link"
+    },
+    {
+        "id": 21,
+        "title": "Advanced Discrete Mathematics",
+        "subject": "Electronics",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1wpI43r1LlmIxNLjKzt8YIfYvZ_CRcezl?usp=drive_link"
+    },
+    {
+        "id": 22,
+        "title": "Algorithm Design 2",
+        "subject": "Electronics",
+        "semester": "Sem 4",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1KcT-lVag-kV5OpZA_dxT4JTRcPaIxDn6?usp=drive_link"
+    },
+    {
+        "id": 23,
+        "title": "Applied Linear Algebra",
+        "subject": "Mathematics",
+        "semester": "Sem 4",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1S4fMwpVETQ_3hjIfh47pl4LSicZprFAm?usp=drive_link"
+    },
+    {
+        "id": 24,
+        "title": "Computer Organisation And Architecture",
+        "subject": "Electronics",
+        "semester": "Sem 4",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1nwoDPHw_XVKLGY22FVbm3FqYYo_E_mpX?usp=drive_link"
+    },
+    {
+        "id": 25,
+        "title": "Computer Science Workshop 2",
+        "subject": "Computer Science",
+        "semester": "Sem 4",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1Q4ssemkq7RWy4mgZtxm0roydqdVD9tjS?usp=drive_link"
+    },
+    {
+        "id": 26,
+        "title": "Universal Human Values",
+        "subject": "General",
+        "semester": "Sem 4",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1kw7ofeDWkSgMXKZS95R30RbfUfOdkBbF?usp=drive_link"
+    },
+    {
+        "id": 27,
+        "title": "Computer Networking",
+        "subject": "Computer Science",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1G4CZ864f2Ely1GwESEcr48wy92WcRh5y?usp=drive_link"
+    },
+    {
+        "id": 28,
+        "title": "Design of Operating System",
+        "subject": "Electronics",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1PXX1GItcLGka3Ati_YZCzrwLkfyb4oYj?usp=drive_link"
+    },
+    {
+        "id": 29,
+        "title": "Intermediate Discrete Mathematics",
+        "subject": "Mathematics",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1qIZkGbNSspH9rDoqnYRnP7Venq25U8XA?usp=drive_link"
+    },
+    {
+        "id": 30,
+        "title": "Operating System Workshop",
+        "subject": "Computer Science",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1_kQ_SHffr38yIo3FExC22RDuG-tT-thJ?usp=drive_link"
+    },
+    {
+        "id": 31,
+        "title": "Problem Solving and Design using C",
+        "subject": "Computer Science",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1febMYWU_K43ksJCy-Gf3XDhXGCBVIf-U?usp=drive_link"
+    },
+    {
+        "id": 32,
+        "title": "Programming in Python",
+        "subject": "Computer Science",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1mnFLII_kmH6xdog2I6N4NgpTSPqPqrtE?usp=drive_link"
+    },
+    {
+        "id": 33,
+        "title": "Theory of Computation",
+        "subject": "Computer Science",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1x7-ZFls0TxgoL-eQlUckhDcnsSXWZ9hq?usp=drive_link"
+    },
+    {
+        "id": 34,
+        "title": "Web Technology Workshop 1",
+        "subject": "Computer Science",
+        "semester": "Sem 5",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1w96VDCbsHEdJKXkH5YwLUMMai3BEeTzd?usp=drive_link"
+    },
+    {
+        "id": 35,
+        "title": "Computer Networking Workshop ",
+        "subject": "Computer Science",
+        "semester": "Sem 6",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1mgfANFuUZbRU5-Q-fCUWavmVD6mE5JM-?usp=drive_link"
+    },
+    {
+        "id": 36,
+        "title": "Cryptography and Network Security",
+        "subject": "Computer Science",
+        "semester": "Sem 6",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1rr9Xf658xdWI_rE1KTOqndfpXvUQnjRm?usp=drive_link"
+    },
+    {
+        "id": 37,
+        "title": "Introduction to Data Science using Python",
+        "subject": "Computer Science",
+        "semester": "Sem 6",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1x0EwcjcOkn6N2K5idDLG8eNM_kES3K7S?usp=drive_link"
+    },
+    {
+        "id": 38,
+        "title": "Pattern Recognition",
+        "subject": "Computer Science",
+        "semester": "Sem 6",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/1CV3CtYNMuW3ikMjC84iL1YTVUATTDGcU?usp=drive_link"
+    },
+    {
+        "id": 39,
+        "title": "Programming Languages And Compilers",
+        "subject": "Computer Science",
+        "semester": "Sem 6",
+        "type": "PDF",
+        "author": "Lab Assistant",
+        "date": "2025-10-15",
+        "downloadLink": "https://drive.google.com/drive/folders/10mGbN0JgEkRw589QFBapvl3o8MuPtLmg?usp=drive_link"
+    }
+]
