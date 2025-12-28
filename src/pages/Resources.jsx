@@ -37,17 +37,17 @@ const Resources = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4 flex items-center justify-center gap-3">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 flex items-center justify-center gap-3">
             <BookOpen className="h-10 w-10 text-green-600" />
             Resource Library
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-2xl mx-auto">
             Access a vast collection of study materials, past papers, and academic resources curated for your success.
           </p>
         </div>
 
         {/* Controls */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 mb-8">
+        <div className="bg-white dark:bg-black p-6 rounded-2xl border border-gray-100 dark:border-green-500/10 mb-8 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.2)]">
           <div className="flex flex-col gap-6">
 
             {/* Search Bar */}
@@ -56,7 +56,7 @@ const Resources = () => {
               <input
                 type="text"
                 placeholder="Search by title, subject, or author..."
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
+                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-green-500/10 bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -102,7 +102,7 @@ const Resources = () => {
                   <select
                     value={filters.type}
                     onChange={(e) => handleFilterChange('type', e.target.value)}
-                    className="w-full appearance-none pl-4 pr-10 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 cursor-pointer"
+                    className="w-full appearance-none pl-4 pr-10 py-3 rounded-xl border border-gray-200 dark:border-green-500/10 bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 cursor-pointer"
                   >
                     {types.map(type => <option key={type} value={type}>{type}</option>)}
                   </select>

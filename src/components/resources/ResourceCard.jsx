@@ -13,32 +13,32 @@ const ResourceCard = ({ resource }) => {
     };
 
     return (
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-5 hover:shadow-md transition-all duration-300 group">
+        <div className="bg-white dark:bg-black rounded-xl border border-gray-100 dark:border-green-500/10 p-5 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300 group">
             <div className="flex items-start justify-between mb-4">
-                <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gray-50 dark:bg-green-900/20 p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     {getIcon(resource.type)}
                 </div>
-                <span className="text-xs font-semibold px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                <span className="text-xs font-semibold px-2 py-1 rounded-md bg-gray-100 dark:bg-green-900/30 text-gray-700 dark:text-green-300 uppercase tracking-wider">
                     {resource.type}
                 </span>
             </div>
 
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2 line-clamp-2 min-h-[3.5rem]">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-2 min-h-[3.5rem]">
                 {resource.title}
             </h3>
 
-            <div className="text-sm text-gray-500 dark:text-gray-400 mb-4 space-y-1">
-                <p><span className="font-medium">Subject:</span> {resource.subject}</p>
-                <p><span className="font-medium">By:</span> {resource.author}</p>
+            <div className="text-sm text-slate-600 dark:text-gray-400 mb-4 space-y-1">
+                <p><span className="font-medium text-slate-900 dark:text-gray-300">Subject:</span> {resource.subject}</p>
+                <p><span className="font-medium text-slate-900 dark:text-gray-300">By:</span> {resource.author}</p>
             </div>
 
-            <div className="pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
-                <span className="text-xs text-gray-400">{resource.date}</span>
+            <div className="pt-4 border-t border-gray-100 dark:border-green-500/10 flex justify-between items-center">
+                <span className="text-xs text-slate-500 dark:text-gray-500 font-medium">{resource.date}</span>
                 <a
                     href={resource.downloadLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors"
+                    className="flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 transition-colors"
                 >
                     {resource.type === 'Video' ? (
                         <>
