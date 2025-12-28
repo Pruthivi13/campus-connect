@@ -82,7 +82,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="container mx-auto px-6 py-8 relative z-10">
+    <div className="max-w-6xl mx-auto px-8 lg:px-12 py-8 relative z-10">
 
       {/* 1. Academic Resources Section */}
       <div className="mb-12">
@@ -92,7 +92,7 @@ const Home = () => {
             <Link
               to={resource.link}
               key={index}
-              className={`bg-white dark:bg-black p-8 rounded-3xl border-0 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-start h-[280px] justify-between group ${resource.glow}`}
+              className={`bg-white dark:bg-black p-8 rounded-3xl shadow-md hover:shadow-lg dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-start h-[280px] justify-between group border border-gray-100 dark:border-transparent ${resource.glow}`}
             >
               <div className={`${resource.bg} p-4 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 {resource.icon}
@@ -121,7 +121,7 @@ const Home = () => {
           {notices.map((notice) => (
             <div
               key={notice.id}
-              className={`bg-white dark:bg-black rounded-2xl p-6 transition-all flex flex-col h-full border-0 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] ${notice.color} ${notice.glow}`}
+              className={`bg-white dark:bg-black rounded-2xl p-6 transition-all flex flex-col h-full shadow-md hover:shadow-lg dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] border border-gray-100 dark:border-transparent ${notice.color} ${notice.glow}`}
             >
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
