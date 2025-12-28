@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import resourcesData from '../data/resources.json';
 import ResourceCard from '../components/resources/ResourceCard';
-import { Search, Filter, BookOpen, ChevronDown } from 'lucide-react';
+import { Search, Filter, BookOpen, ChevronDown, FileQuestion, Book } from 'lucide-react';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,6 +30,9 @@ const Resources = () => {
 
     return matchesSearch && matchesSemester && matchesSubject && matchesType;
   });
+
+  const pyqResources = filteredResources.filter(r => r.type === 'PYQ');
+  const studyMaterials = filteredResources.filter(r => r.type !== 'PYQ');
 
   return (
     <div className="container mx-auto px-6 py-8 relative z-10">
@@ -119,31 +122,55 @@ const Resources = () => {
           Showing {filteredResources.length} resources
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredResources.length > 0 ? (
-            filteredResources.map((resource) => (
-              <ResourceCard key={resource.id} resource={resource} />
-            ))
-          ) : (
-            <div className="col-span-full text-center py-16">
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4">
-                <Search className="h-8 w-8 text-gray-400" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">No resources found</h3>
-              <p className="text-gray-500 dark:text-gray-400">Try adjusting your filters or search terms.</p>
-              <button
-                onClick={() => {
-                  setSearchTerm('');
-                  setFilters({ semester: 'All', subject: 'All', type: 'All' });
-                }}
-                className="mt-4 text-green-600 font-semibold hover:underline"
-              >
-                Clear all filters
-              </button>
+        {/* Study Materials Section */}
+        {studyMaterials.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2 border-b border-gray-200 dark:border-gray-700 pb-2">
+              <Book className="h-6 w-6 text-blue-600" />
+              Study Materials
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {studyMaterials.map((resource) => (
+                <ResourceCard key={resource.id} resource={resource} />
+              ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
+        {/* PYQ Section */}
+        {pyqResources.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2 border-b border-gray-200 dark:border-gray-700 pb-2">
+              <FileQuestion className="h-6 w-6 text-purple-600" />
+              Previous Year Questions
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pyqResources.map((resource) => (
+                <ResourceCard key={resource.id} resource={resource} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* No Results */}
+        {filteredResources.length === 0 && (
+          <div className="col-span-full text-center py-16">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4">
+              <Search className="h-8 w-8 text-gray-400" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">No resources found</h3>
+            <p className="text-gray-500 dark:text-gray-400">Try adjusting your filters or search terms.</p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setFilters({ semester: 'All', subject: 'All', type: 'All' });
+              }}
+              className="mt-4 text-green-600 font-semibold hover:underline"
+            >
+              Clear all filters
+            </button>
+          </div>
+        )}
 
       </div>
     </div>

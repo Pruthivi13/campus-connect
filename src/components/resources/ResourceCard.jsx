@@ -6,7 +6,7 @@ const ResourceCard = ({ resource }) => {
         switch (type) {
             case 'PDF': return <FileText className="h-6 w-6 text-red-500" />;
             case 'Video': return <Video className="h-6 w-6 text-blue-500" />;
-            case 'Paper': return <FileText className="h-6 w-6 text-purple-500" />;
+            case 'PYQ': return <FileText className="h-6 w-6 text-purple-500" />;
             case 'Syllabus': return <FileText className="h-6 w-6 text-green-500" />;
             default: return <LinkIcon className="h-6 w-6 text-gray-500" />;
         }
