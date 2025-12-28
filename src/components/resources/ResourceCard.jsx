@@ -29,6 +29,7 @@ const ResourceCard = ({ resource }) => {
 
             <div className="text-sm text-gray-500 dark:text-gray-400 mb-4 space-y-1">
                 <p><span className="font-medium">Subject:</span> {resource.subject}</p>
+                <p><span className="font-medium">Semester:</span> {resource.semester}</p>
                 <p><span className="font-medium">By:</span> {resource.author}</p>
             </div>
 
