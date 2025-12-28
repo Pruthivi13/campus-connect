@@ -1,0 +1,6 @@
+# This file defines code owners for specific files
+# Changes to these files will require approval from the listed owner(s)
+
+# Header and Footer components - require owner approval
+/src/components/Header.jsx @Pruthivi13
+/src/components/Footer.jsx @Pruthivi13
