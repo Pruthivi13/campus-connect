@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Moon, Sun, Clover } from 'lucide-react';
+import { Moon, Sun, Home, BookOpen, Bell, Map, Users } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { Link, useLocation } from 'react-router-dom';
-import NoticeBoardTicker from './home/NoticeBoardTicker';
 import statusConfig from '../data/status.json';
 
 const Header = () => {
@@ -11,11 +10,11 @@ const Header = () => {
   const [status, setStatus] = useState({ isOpen: false, text: 'Checking...' });
 
   const navItems = [
-    { name: 'Home', icon: '/svgs/Home.svg', path: '/' },
-    { name: 'Resources', icon: '/svgs/resouces.svg', path: '/resources' },
-    { name: 'Notice Board', icon: '/svgs/notice.svg', path: '/notices' },
-    { name: 'Campus Map', icon: '/svgs/map.svg', path: '/map' },
-    { name: 'About Us', icon: '/svgs/person.svg', path: '/about' },
+    { name: 'Home', path: '/', icon: Home },
+    { name: 'Resources', path: '/resources', icon: BookOpen },
+    { name: 'Notice Board', path: '/notices', icon: Bell },
+    { name: 'Campus Map', path: '/map', icon: Map },
+    { name: 'About Us', path: '/about', icon: Users },
   ];
 
   const isActive = (path) => {
@@ -28,23 +27,20 @@ const Header = () => {
     const checkStatus = () => {
       const now = new Date();
 
-      // 1. Check Holidays
       const todayStr = now.toISOString().split('T')[0];
       const holiday = statusConfig.holidays.find(h => h.date === todayStr);
 
       if (holiday) {
-        setStatus({ isOpen: false, text: holiday.name });
+        setStatus({ isOpen: false, text: 'Closed' });
         return;
       }
 
-      // 2. Check Day of Week
-      const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+      const day = now.getDay();
       if (!statusConfig.schedule.days.includes(day)) {
-        setStatus({ isOpen: false, text: 'Weekend Closed' });
+        setStatus({ isOpen: false, text: 'Closed' });
         return;
       }
 
-      // 3. Check Time
       const [openHour, openMinute] = statusConfig.schedule.openTime.split(':').map(Number);
       const [closeHour, closeMinute] = statusConfig.schedule.closeTime.split(':').map(Number);
 
@@ -53,115 +49,124 @@ const Header = () => {
       const closeMinutes = closeHour * 60 + closeMinute;
 
       if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
-        setStatus({ isOpen: true, text: 'Campus Open' });
+        setStatus({ isOpen: true, text: 'Open' });
       } else {
-        setStatus({ isOpen: false, text: 'Campus Closed' });
+        setStatus({ isOpen: false, text: 'Closed' });
       }
     };
 
     checkStatus();
-    const interval = setInterval(checkStatus, 60000); // Update every minute
+    const interval = setInterval(checkStatus, 60000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-r from-green-300 via-white to-green-300 dark:from-green-900 dark:via-green-900 dark:to-green-800 transition-colors duration-300">
-      <div className="container mx-auto px-6 pt-6 pb-24 relative z-20">
+    <div className="relative bg-gradient-to-b from-green-300 via-green-200 to-green-100 dark:from-[#0d4a0d] dark:via-[#0a3a0a] dark:to-[#052505] min-h-[360px] pb-8">
+      <div className="max-w-6xl mx-auto px-8 pt-8 pb-28 relative z-20">
 
-
-        {/* Unified Navigation Bar */}
-        <div className="flex justify-between items-center mb-10">
-          {/* Logo - Brand Element */}
-          <div className="flex-shrink-0 flex items-center h-full">
-            <img
-              src={theme === 'dark' ? "/logo-dark.png" : "/logo.png"}
-              alt="Campus Connect Logo"
-              className="h-32 w-auto object-contain translate-y-5"
-            />
-          </div>
-
-          {/* Navigation - Center */}
-          <nav className="flex-1 flex justify-center">
-            <ul className="flex items-center gap-1 bg-white/10 backdrop-blur-md p-1 rounded-full">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive(item.path)
-                      ? 'bg-white text-green-600 shadow-sm'
-                      : 'text-black hover:bg-black/10 dark:text-white dark:hover:bg-white/10'
-                      }`}
-                  >
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className={`h-4 w-4 ${isActive(item.path) ? '' : 'brightness-0 dark:invert'}`}
-                    />
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        {/* Row 1: Logo and Right Actions */}
+        <div className="flex justify-between items-center mb-8">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3">
+            {/* X/Clover Icon - 4 overlapping circles */}
+            <svg className="h-10 w-10" viewBox="0 0 40 40" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#22c55e" />
+              <circle cx="28" cy="12" r="10" fill="#22c55e" />
+              <circle cx="12" cy="28" r="10" fill="#22c55e" />
+              <circle cx="28" cy="28" r="10" fill="#22c55e" />
+            </svg>
+            <span className="text-green-700 dark:text-white text-xl font-semibold tracking-wide">Campus Connect</span>
+          </Link>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-6">
-            {/* Dark Mode Toggle Switch */}
+          <div className="flex items-center gap-4">
+            {/* Dark Mode Toggle - No border */}
             <button
               onClick={toggleTheme}
-              className={`relative h-8 w-16 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 ${theme === 'dark' ? 'bg-green-950' : 'bg-black/10 hover:bg-black/20'
-                }`}
-              aria-label="Toggle Dark Mode"
+              className="relative w-16 h-8 rounded-full bg-green-200 dark:bg-green-800 border-0 outline-none transition-colors duration-300"
+              aria-label="Toggle Theme"
             >
               <div
-                className={`absolute top-1 left-1 h-6 w-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center ${theme === 'dark' ? 'translate-x-8' : 'translate-x-0'
-                  }`}
+                className={`absolute top-0.5 h-7 w-7 rounded-full bg-white dark:bg-green-500 shadow-md flex items-center justify-center transition-all duration-300 ease-in-out ${
+                  theme === 'dark' ? 'left-8' : 'left-0.5'
+                }`}
               >
                 {theme === 'dark' ? (
-                  <img src="/svgs/dark-moon.svg" alt="Dark Mode" className="h-4 w-4" />
+                  <Sun className="h-4 w-4 text-white" />
                 ) : (
-                  <img src="/svgs/dark-sun.svg" alt="Light Mode" className="h-4 w-4" />
+                  <Moon className="h-4 w-4 text-green-600" />
                 )}
               </div>
             </button>
 
-            {/* Status Badge */}
-            <div className="bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
-              <span className={`h-2 w-2 rounded-full ${status.isOpen ? 'bg-green-500' : 'bg-red-500'} animate-pulse`} />
-              <span className="text-xs font-bold text-gray-600 uppercase tracking-wider">{status.text}</span>
+            {/* Campus Status Badge */}
+            <div className="flex items-center gap-2 bg-white dark:bg-green-900/50 rounded-lg px-3 py-1.5 shadow-sm">
+              <span className={`h-2 w-2 rounded-full ${status.isOpen ? 'bg-green-500' : 'bg-red-500'}`} />
+              <span className="text-gray-600 dark:text-gray-300 text-xs font-medium">Campus Status</span>
+              <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+                status.isOpen 
+                  ? 'bg-green-500 text-white' 
+                  : 'bg-red-500 text-white'
+              }`}>
+                {status.text}
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Search Bar - INSIDE Gradient */}
-        <div className="flex justify-center mb-8">
+        {/* Row 2: Navigation with Icons */}
+        <nav className="flex justify-center mb-6">
+          <ul className="flex items-center gap-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm px-3 py-2 rounded-full shadow-md dark:border dark:border-green-500/30">
+            {navItems.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                      isActive(item.path)
+                        ? 'bg-green-500 text-white dark:bg-green-600'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-green-900/50'
+                    }`}
+                  >
+                    <IconComponent className="h-4 w-4" />
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* Row 3: Search Bar */}
+        <div className="flex justify-center">
           <div className="relative w-full max-w-2xl">
             <input
               type="text"
               placeholder="Search notices, resources, or events..."
-              className="w-full pl-14 pr-6 py-4 rounded-full border-none text-gray-700 placeholder-gray-400 shadow-2xl focus:ring-4 focus:ring-green-400/30 bg-white/95 dark:bg-black dark:text-white dark:placeholder-gray-400 backdrop-blur-sm transition-colors duration-300"
+              className="w-full pl-14 pr-6 py-3.5 rounded-full border-2 border-green-500 bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400/50 focus:border-green-400 transition-all duration-300"
             />
-            <div className="absolute left-2 top-1/2 -translate-y-1/2 bg-green-500 p-2 rounded-full">
-              <img src="/svgs/Search.svg" alt="Search" className="h-5 w-5 brightness-0 invert" />
+            <div className="absolute left-1.5 top-1/2 -translate-y-1/2 bg-green-500 p-2.5 rounded-full">
+              <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
             </div>
           </div>
         </div>
 
-        {/* Notice Board Ticker - Protruding/Inside Gradient */}
-        <NoticeBoardTicker />
-
       </div>
 
-      {/* Decorative Curve SVG */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+      {/* Bottom Curved Section - gentle arc */}
+      <div className="absolute -bottom-1 left-0 w-full overflow-visible z-30">
         <svg
-          className="relative block w-full h-16 sm:h-24 text-gray-50 dark:text-black transition-colors duration-300"
-          viewBox="0 0 1200 120"
+          className="relative block w-full h-16"
+          viewBox="0 0 1440 60"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,80 Q600,0 1200,80 V120 H0 Z"
+            d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"
             fill="currentColor"
+            className="text-white dark:text-[#0d5a1d]"
           />
         </svg>
       </div>
