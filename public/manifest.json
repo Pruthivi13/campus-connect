@@ -1,0 +1,20 @@
+{
+    "short_name": "Campus Connect",
+    "name": "Campus Connect - Academic Resource Platform",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "logo-combined.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#22c55e",
+    "background_color": "#ffffff"
+}

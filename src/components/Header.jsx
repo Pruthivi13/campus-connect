@@ -3,6 +3,7 @@ import { Moon, Sun, Home, BookOpen, Bell, Map, Users } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { Link, useLocation } from 'react-router-dom';
 import statusConfig from '../data/status.json';
+import NoticeBoardTicker from './home/NoticeBoardTicker';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -61,7 +62,20 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-b from-green-300 via-green-200 to-green-100 dark:from-[#0d4a0d] dark:via-[#0a3a0a] dark:to-[#052505] min-h-[360px] pb-8">
+    <div className="relative min-h-[360px] pb-8 overflow-hidden">
+      {/* Light Mode Gradient Background */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-b from-green-300 via-green-200 to-green-100 transition-opacity duration-300 ease-in-out ${
+          theme === 'dark' ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+      
+      {/* Dark Mode Gradient Background */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-b from-[#0d4a0d] via-[#0a3a0a] to-[#052505] transition-opacity duration-300 ease-in-out ${
+          theme === 'dark' ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
       <div className="max-w-6xl mx-auto px-8 pt-8 pb-28 relative z-20">
 
         {/* Row 1: Logo and Right Actions */}
@@ -79,34 +93,40 @@ const Header = () => {
           </Link>
 
           {/* Right Actions */}
+          {/* Right Actions */}
           <div className="flex items-center gap-4">
-            {/* Dark Mode Toggle - No border */}
+            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="relative w-16 h-8 rounded-full bg-green-200 dark:bg-green-800 border-0 outline-none transition-colors duration-300"
+              className="relative w-16 h-8 rounded-full bg-white dark:bg-green-900 shadow-sm transition-colors duration-300"
               aria-label="Toggle Theme"
             >
               <div
-                className={`absolute top-0.5 h-7 w-7 rounded-full bg-white dark:bg-green-500 shadow-md flex items-center justify-center transition-all duration-300 ease-in-out ${
-                  theme === 'dark' ? 'left-8' : 'left-0.5'
+                className={`absolute top-0.5 h-7 w-7 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out shadow-sm ${
+                  theme === 'dark' 
+                    ? 'left-8 bg-white' 
+                    : 'left-0.5 bg-green-500'
                 }`}
               >
                 {theme === 'dark' ? (
-                  <Sun className="h-4 w-4 text-white" />
+                  <Sun className="h-4 w-4 text-green-600" />
                 ) : (
-                  <Moon className="h-4 w-4 text-green-600" />
+                  <Moon className="h-4 w-4 text-white" />
                 )}
               </div>
             </button>
 
             {/* Campus Status Badge */}
-            <div className="flex items-center gap-2 bg-white dark:bg-green-900/50 rounded-lg px-3 py-1.5 shadow-sm">
-              <span className={`h-2 w-2 rounded-full ${status.isOpen ? 'bg-green-500' : 'bg-red-500'}`} />
-              <span className="text-gray-600 dark:text-gray-300 text-xs font-medium">Campus Status</span>
-              <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+            <div className="relative flex items-center gap-3 bg-white dark:bg-green-900/50 rounded-lg pl-4 pr-1.5 py-1.5 shadow-sm">
+                {/* Status Dot - Floating top-left */}
+               <span className={`absolute -top-1 -left-1 h-3 w-3 rounded-full border-2 border-white dark:border-green-900 ${status.isOpen ? 'bg-green-500' : 'bg-red-500'}`} />
+               
+              <span className="text-gray-800 dark:text-gray-200 text-sm font-medium">Campus Status</span>
+              
+              <span className={`px-4 py-1 rounded-full text-sm font-medium ${
                 status.isOpen 
-                  ? 'bg-green-500 text-white' 
-                  : 'bg-red-500 text-white'
+                  ? 'bg-green-300 text-green-900' 
+                  : 'bg-red-200 text-red-900'
               }`}>
                 {status.text}
               </span>
@@ -139,7 +159,7 @@ const Header = () => {
         </nav>
 
         {/* Row 3: Search Bar */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8">
           <div className="relative w-full max-w-2xl">
             <input
               type="text"
@@ -153,20 +173,25 @@ const Header = () => {
             </div>
           </div>
         </div>
+        
+        {/* Notice Board Ticker */}
+        <div className="relative z-40 -mb-16">
+           <NoticeBoardTicker />
+        </div>
 
       </div>
 
-      {/* Bottom Curved Section - gentle arc */}
-      <div className="absolute -bottom-1 left-0 w-full overflow-visible z-30">
+      {/* Bottom Curved Section - Convex (Green Bulge) */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30">
         <svg
-          className="relative block w-full h-16"
-          viewBox="0 0 1440 60"
+          className="relative block w-full h-[100px]"
+          viewBox="0 0 1440 100"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"
+            d="M0,0 C480,100 960,100 1440,0 V100 H0 V0 Z"
             fill="currentColor"
-            className="text-white dark:text-[#0d5a1d]"
+            className="text-white dark:text-[#0d5a1d] transition-colors duration-300"
           />
         </svg>
       </div>

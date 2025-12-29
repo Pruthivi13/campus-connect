@@ -29,6 +29,7 @@ const ResourceCard = ({ resource }) => {
 
             <div className="text-sm text-slate-600 dark:text-gray-400 mb-4 space-y-1">
                 <p><span className="font-medium text-slate-900 dark:text-gray-300">Subject:</span> {resource.subject}</p>
+                <p><span className="font-medium text-slate-900 dark:text-gray-300">Semester:</span> {resource.semester}</p>
                 <p><span className="font-medium text-slate-900 dark:text-gray-300">By:</span> {resource.author}</p>
             </div>
 
@@ -51,7 +52,7 @@ const ResourceCard = ({ resource }) => {
                     )}
                 </a>
             </div>
-        </div>
+        </div >
     );
 };
 
