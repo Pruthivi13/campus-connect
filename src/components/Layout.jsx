@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen transition-colors duration-300">
       <Header />
-      <main className="flex-grow relative bg-white dark:bg-gradient-to-b dark:from-[#0d5a1d] dark:via-[#0a4515] dark:to-[#052a0a]">
+      <main className="flex-grow relative bg-white dark:bg-black">
         {/* Subtle grid pattern overlay - only visible in dark mode */}
         <div className="absolute inset-0 pointer-events-none opacity-0 dark:opacity-10" 
           style={{
