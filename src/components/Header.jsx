@@ -83,7 +83,7 @@ const Header = () => {
             {/* Logo Container */}
             <div className="relative h-[180px] w-[500px]">
               <img
-                src="/logo-new.png"
+                src="/logo.png"
                 alt="Campus Connect Logo"
                 className="h-full w-auto object-contain object-left scale-150 origin-left transition-all duration-500 ease-in-out"
               />
