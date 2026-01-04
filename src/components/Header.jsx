@@ -64,17 +64,15 @@ const Header = () => {
   return (
     <div className="relative min-h-[360px] pb-8 overflow-hidden">
       {/* Light Mode Gradient Background */}
-      <div 
-        className={`absolute inset-0 bg-gradient-to-b from-green-300 via-green-200 to-green-100 transition-opacity duration-300 ease-in-out ${
-          theme === 'dark' ? 'opacity-0' : 'opacity-100'
-        }`}
+      <div
+        className={`absolute inset-0 bg-gradient-to-b from-green-300 via-green-200 to-green-100 transition-opacity duration-300 ease-in-out ${theme === 'dark' ? 'opacity-0' : 'opacity-100'
+          }`}
       />
-      
+
       {/* Dark Mode Gradient Background */}
-      <div 
-        className={`absolute inset-0 bg-gradient-to-b from-black via-[#0a2a12] to-[#0d5a1d] transition-opacity duration-300 ease-in-out ${
-          theme === 'dark' ? 'opacity-100' : 'opacity-0'
-        }`}
+      <div
+        className={`absolute inset-0 bg-gradient-to-b from-black via-[#0a2a12] to-[#0d5a1d] transition-opacity duration-300 ease-in-out ${theme === 'dark' ? 'opacity-100' : 'opacity-0'
+          }`}
       />
       <div className="max-w-6xl mx-auto px-8 pt-4 pb-28 relative z-20">
 
@@ -82,23 +80,12 @@ const Header = () => {
         <div className="flex justify-between items-center mb-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            {/* Logo Container with Crossfade */}
-            <div className="relative h-[60px] w-[400px]">
-              {/* Light Mode Logo */}
-              <img 
-                src="/svgs/logo_light.png" 
-                alt="Campus Connect Logo" 
-                className={`absolute inset-0 h-full w-full object-contain object-left scale-150 origin-left transition-opacity duration-500 ease-in-out ${
-                  theme === 'dark' ? 'opacity-0' : 'opacity-100'
-                }`}
-              />
-              {/* Dark Mode Logo */}
-              <img 
-                src="/svgs/logo_dark.png" 
-                alt="Campus Connect Logo" 
-                className={`absolute inset-0 h-full w-full object-contain object-left scale-150 origin-left transition-opacity duration-500 ease-in-out ${
-                  theme === 'dark' ? 'opacity-100' : 'opacity-0'
-                }`}
+            {/* Logo Container */}
+            <div className="relative h-[180px] w-[500px]">
+              <img
+                src="/logo-new.png"
+                alt="Campus Connect Logo"
+                className="h-full w-auto object-contain object-left scale-150 origin-left transition-all duration-500 ease-in-out"
               />
             </div>
           </Link>
@@ -112,11 +99,10 @@ const Header = () => {
               aria-label="Toggle Theme"
             >
               <div
-                className={`absolute top-0.5 h-7 w-7 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out ${
-                  theme === 'dark' 
-                    ? 'left-8 bg-gray-800' 
-                    : 'left-0.5 bg-[#14AE5C]'
-                }`}
+                className={`absolute top-0.5 h-7 w-7 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out ${theme === 'dark'
+                  ? 'left-8 bg-gray-800'
+                  : 'left-0.5 bg-[#14AE5C]'
+                  }`}
               >
                 {theme === 'dark' ? (
                   <Sun className="h-4 w-4 text-yellow-400" />
@@ -128,16 +114,15 @@ const Header = () => {
 
             {/* Campus Status Badge */}
             <div className="relative flex items-center gap-2 bg-white dark:bg-gray-800 rounded-xl pl-5 pr-2 py-2 shadow-sm transition-all">
-               {/* Status Dot */}
-               <div className={`absolute top-2 left-2 h-2 w-2 rounded-full ${status.isOpen ? 'bg-[#14AE5C]' : 'bg-red-500'} animate-pulse`} />
-               
+              {/* Status Dot */}
+              <div className={`absolute top-2 left-2 h-2 w-2 rounded-full ${status.isOpen ? 'bg-[#14AE5C]' : 'bg-red-500'} animate-pulse`} />
+
               <span className="text-gray-800 dark:text-gray-100 text-sm font-medium">Campus Status</span>
-              
-              <span className={`px-3 py-1 rounded-xl text-sm font-semibold transition-colors ${
-                status.isOpen 
-                  ? 'bg-[#a8f0c0] text-[#0d5a1d]' 
-                  : 'bg-[#ff8fa3] text-[#7f1d1d]'
-              }`}>
+
+              <span className={`px-3 py-1 rounded-xl text-sm font-semibold transition-colors ${status.isOpen
+                ? 'bg-[#a8f0c0] text-[#0d5a1d]'
+                : 'bg-[#ff8fa3] text-[#7f1d1d]'
+                }`}>
                 {status.text}
               </span>
             </div>
@@ -153,11 +138,10 @@ const Header = () => {
                 <li key={item.name}>
                   <Link
                     to={item.path}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      isActive(item.path)
-                        ? 'bg-green-500 text-white dark:bg-[#14AE5C] dark:shadow-[0_0_15px_rgba(20,174,92,0.6)]'
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-[#14AE5C]/20'
-                    }`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive(item.path)
+                      ? 'bg-green-500 text-white dark:bg-[#14AE5C] dark:shadow-[0_0_15px_rgba(20,174,92,0.6)]'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-[#14AE5C]/20'
+                      }`}
                   >
                     <IconComponent className="h-4 w-4" />
                     {item.name}
@@ -183,10 +167,10 @@ const Header = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Notice Board Ticker */}
         <div className="relative z-40 -mb-16">
-           <NoticeBoardTicker />
+          <NoticeBoardTicker />
         </div>
 
       </div>
