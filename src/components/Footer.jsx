@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-8">
             <div className="flex items-center gap-3">
               <img
-                src="/logo-new.png"
+                src="/logo.png"
                 alt="Campus Connect Logo"
                 className="h-40 w-auto object-contain"
               />
