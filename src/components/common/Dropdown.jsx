@@ -25,30 +25,29 @@ const Dropdown = ({ label, options, value, onChange }) => {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full text-left px-4 py-3 rounded-xl border bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white transition-all duration-200 outline-none flex items-center justify-between
-          ${isOpen 
-            ? 'border-green-500 ring-2 ring-green-500/20' 
-            : 'border-gray-200 dark:border-gray-600 hover:border-green-400 dark:hover:border-green-500'
+        className={`w-full text-left px-4 py-3 rounded-xl border bg-gray-50 dark:bg-black text-gray-800 dark:text-white transition-all duration-200 outline-none flex items-center justify-between
+          ${isOpen
+            ? 'border-green-500 ring-2 ring-green-500/20 shadow-[0_0_15px_-3px_rgba(34,197,94,0.2)]'
+            : 'border-gray-200 dark:border-green-500/10 hover:border-green-400 dark:hover:border-green-500/30'
           }`}
       >
         <span className="block truncate">{value}</span>
-        <ChevronDown 
-          className={`h-4 w-4 text-gray-400 pointer-events-none transition-transform duration-300 ml-2 shrink-0 ${
-            isOpen ? 'rotate-180 text-green-500' : ''
-          }`} 
+        <ChevronDown
+          className={`h-4 w-4 text-gray-400 pointer-events-none transition-transform duration-300 ml-2 shrink-0 ${isOpen ? 'rotate-180 text-green-500' : ''
+            }`}
         />
       </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute z-50 w-full mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 max-h-60 overflow-auto animate-in fade-in slide-in-from-top-2 duration-200 
+        <div className="absolute z-50 w-full mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-100 dark:border-green-500/10 max-h-60 overflow-auto animate-in fade-in slide-in-from-top-2 duration-200 
           [&::-webkit-scrollbar]:w-1.5 
           [&::-webkit-scrollbar-track]:bg-transparent 
           [&::-webkit-scrollbar-thumb]:bg-gray-300 
-          dark:[&::-webkit-scrollbar-thumb]:bg-gray-600 
+          dark:[&::-webkit-scrollbar-thumb]:bg-green-900/30
           [&::-webkit-scrollbar-thumb]:rounded-full 
           hover:[&::-webkit-scrollbar-thumb]:bg-gray-400 
-          dark:hover:[&::-webkit-scrollbar-thumb]:bg-gray-500">
+          dark:hover:[&::-webkit-scrollbar-thumb]:bg-green-700/50">
           <ul className="py-2">
             {options.map((option) => (
               <li key={option}>
@@ -59,9 +58,9 @@ const Dropdown = ({ label, options, value, onChange }) => {
                     setIsOpen(false);
                   }}
                   className={`w-full text-left px-4 py-2.5 flex items-center justify-between text-sm transition-colors
-                    ${option === value 
-                      ? 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 font-medium' 
-                      : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                    ${option === value
+                      ? 'bg-green-50 dark:bg-green-900/40 text-green-700 dark:text-green-400 font-bold'
+                      : 'text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-green-900/10'
                     }`}
                 >
                   <span className="truncate">{option}</span>
