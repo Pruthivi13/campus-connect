@@ -18,11 +18,11 @@ const Notices = () => {
 
   const getTypeColor = (type) => {
     switch (type) {
-      case 'placement': return 'bg-purple-500/20 text-purple-300 border-l-purple-500';
-      case 'academic': return 'bg-blue-500/20 text-blue-300 border-l-blue-500';
-      case 'admin': return 'bg-red-500/20 text-red-300 border-l-red-500';
-      case 'event': return 'bg-yellow-500/20 text-yellow-300 border-l-yellow-500';
-      default: return 'bg-gray-500/20 text-gray-300 border-l-gray-500';
+      case 'placement': return 'border-l-purple-600';
+      case 'academic': return 'border-l-blue-600';
+      case 'admin': return 'border-l-red-600';
+      case 'event': return 'border-l-yellow-600';
+      default: return 'border-l-gray-600';
     }
   };
 
@@ -96,7 +96,7 @@ const Notices = () => {
             filteredNotices.map((notice) => (
               <div
                 key={notice.id}
-                className={`bg-white dark:bg-black p-6 rounded-2xl border-0 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] transition-all duration-300 hover:-translate-y-1 cursor-pointer group border-l-4 ${getTypeColor(notice.type)}`}
+                className={`bg-white dark:bg-black p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] transition-all duration-300 hover:-translate-y-1 cursor-pointer group border-l-4 ${getTypeColor(notice.type)}`}
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
@@ -107,7 +107,7 @@ const Notices = () => {
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white leading-tight group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white drop-shadow-sm leading-tight group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
                         {notice.text}
                       </h3>
                       <span className="text-sm text-slate-600 dark:text-gray-400 font-medium whitespace-nowrap flex items-center gap-1.5">

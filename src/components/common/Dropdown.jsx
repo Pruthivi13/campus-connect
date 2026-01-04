@@ -28,7 +28,7 @@ const Dropdown = ({ label, options, value, onChange }) => {
         className={`w-full text-left px-4 py-3 rounded-xl border bg-gray-50 dark:bg-black text-gray-800 dark:text-white transition-all duration-200 outline-none flex items-center justify-between
           ${isOpen
             ? 'border-green-500 ring-2 ring-green-500/20 shadow-[0_0_15px_-3px_rgba(34,197,94,0.2)]'
-            : 'border-gray-200 dark:border-green-500/10 hover:border-green-400 dark:hover:border-green-500/30'
+            : 'border-gray-200 dark:border-green-500/30 hover:border-green-400 dark:hover:border-green-500/50'
           }`}
       >
         <span className="block truncate">{value}</span>
@@ -40,7 +40,7 @@ const Dropdown = ({ label, options, value, onChange }) => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute z-50 w-full mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-100 dark:border-green-500/10 max-h-60 overflow-auto animate-in fade-in slide-in-from-top-2 duration-200 
+        <div className="absolute z-50 w-full mt-2 bg-white dark:bg-black rounded-xl shadow-xl border border-gray-200 dark:border-green-500/30 max-h-60 overflow-auto animate-in fade-in slide-in-from-top-2 duration-200 
           [&::-webkit-scrollbar]:w-1.5 
           [&::-webkit-scrollbar-track]:bg-transparent 
           [&::-webkit-scrollbar-thumb]:bg-gray-300 

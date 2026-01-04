@@ -49,7 +49,7 @@ const Resources = () => {
         </div>
 
         {/* Controls */}
-        <div className="bg-white dark:bg-black p-6 rounded-2xl border border-gray-100 dark:border-green-500/10 mb-8 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.2)]">
+        <div className="bg-white dark:bg-black p-6 rounded-2xl border border-gray-200 dark:border-green-500/30 mb-8 dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.2)]">
           <div className="flex flex-col gap-6">
 
             {/* Search Bar */}
