@@ -133,7 +133,8 @@ const Notices = () => {
             filteredNotices.map((notice) => (
               <div
                 key={notice.id}
-                className={`bg-white dark:bg-black p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] transition-all duration-300 hover:-translate-y-1 cursor-pointer group border-l-4 ${getTypeColor(notice.type)}`}
+                onClick={() => notice.link && window.open(notice.link, '_blank')}
+                className={`bg-white dark:bg-black p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md dark:shadow-[0_0_40px_-10px_rgba(34,197,94,0.3)] hover:dark:shadow-[0_0_50px_-8px_rgba(34,197,94,0.4)] transition-all duration-300 hover:-translate-y-1 group border-l-4 ${getTypeColor(notice.type)} ${notice.link ? 'cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900/40' : ''}`}
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
@@ -144,7 +145,7 @@ const Notices = () => {
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white drop-shadow-sm leading-tight group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                      <h3 className={`text-lg font-semibold text-slate-900 dark:text-white drop-shadow-sm leading-tight transition-colors ${notice.link ? 'group-hover:text-green-600 dark:group-hover:text-green-400 group-hover:underline' : ''}`}>
                         {notice.text}
                       </h3>
                       <span className="text-sm text-slate-600 dark:text-gray-400 font-medium whitespace-nowrap flex items-center gap-1.5">

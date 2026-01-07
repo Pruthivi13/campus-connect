@@ -58,9 +58,20 @@ const NoticeBoardTicker = () => {
 
         {/* Content Area */}
         <div className="flex-1 flex flex-col items-center justify-center text-center overflow-hidden">
-          <p className="text-gray-800 dark:text-white font-medium text-base truncate w-full px-4 mb-2">
-            {displayedNotices[currentIndex].text}
-          </p>
+          {displayedNotices[currentIndex].link ? (
+            <a 
+              href={displayedNotices[currentIndex].link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-800 dark:text-white font-medium text-base truncate w-full px-4 mb-2 hover:text-green-600 dark:hover:text-green-400 hover:underline transition-all cursor-pointer block"
+            >
+              {displayedNotices[currentIndex].text}
+            </a>
+          ) : (
+            <p className="text-gray-800 dark:text-white font-medium text-base truncate w-full px-4 mb-2">
+              {displayedNotices[currentIndex].text}
+            </p>
+          )}
           
           {/* Pagination Dots */}
           <div className="flex items-center gap-1.5">
