@@ -5,14 +5,16 @@ import adminBlockImg from '../assets/campus map/administrative block.png';
 import csBlockImg from '../assets/campus map/computer science block.png';
 import eBlockImg from '../assets/campus map/e block.png';
 import libraryImg from '../assets/campus map/library.png';
+import cafeteriaImg from '../assets/campus map/cafeteria.png';
+import sBlockImg from '../assets/campus map/S block.png';
 
 const CampusMap = () => {
   const locations = [
     { id: 1, name: 'Administrative Block', color: 'bg-blue-600', dot: 'bg-blue-500', shadow: 'shadow-blue-500/50', image: adminBlockImg, link: 'https://maps.app.goo.gl/wuxpefx14s1WzP3b7' },
     { id: 2, name: 'Library', color: 'bg-purple-600', dot: 'bg-purple-500', shadow: 'shadow-purple-500/50', image: libraryImg, link: 'https://maps.app.goo.gl/vBH2e2yWZQVLCyuZA' },
-    { id: 3, name: 'Cafeteria', color: 'bg-red-600', dot: 'bg-red-500', shadow: 'shadow-red-500/50', link: 'https://maps.app.goo.gl/EhxEeJpA6wH6i5rm8' },
+    { id: 3, name: 'Cafeteria', color: 'bg-red-600', dot: 'bg-red-500', shadow: 'shadow-red-500/50', image: cafeteriaImg, link: 'https://maps.app.goo.gl/EhxEeJpA6wH6i5rm8' },
     { id: 4, name: 'Computer Science Block', color: 'bg-orange-600', dot: 'bg-orange-500', shadow: 'shadow-orange-500/50', image: csBlockImg, link: 'https://maps.app.goo.gl/4quyprHZmsF7AExJ6' },
-    { id: 5, name: 'Sports Complex', color: 'bg-green-600', dot: 'bg-green-500', shadow: 'shadow-green-500/50', link: 'https://maps.app.goo.gl/Taz8cdSCRQdoFj3L7' },
+    { id: 5, name: 'S Block', color: 'bg-green-600', dot: 'bg-green-500', shadow: 'shadow-green-500/50', image: sBlockImg, link: 'https://maps.app.goo.gl/Taz8cdSCRQdoFj3L7' },
     { id: 6, name: 'E Block', color: 'bg-cyan-600', dot: 'bg-cyan-500', shadow: 'shadow-cyan-500/50', image: eBlockImg, link: 'https://maps.app.goo.gl/ojmw1HtomPfc76Fz5' },
   ];
 
