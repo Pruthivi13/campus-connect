@@ -82,7 +82,7 @@ async function scrapeNotices() {
     // 2. Add new scraped notices if they don't exist.
     
     // Let's just prepend new ones and dedupe by text for simplicity.
-    const allNotices = [...scrapedNotices];
+    let allNotices = [...scrapedNotices];
     
     // Add existing ones if they are not in the scraped list
     existingNotices.forEach(existing => {
@@ -90,6 +90,10 @@ async function scrapeNotices() {
             allNotices.push(existing);
         }
     });
+
+    // Sort by date descending and keep top 10
+    allNotices.sort((a, b) => new Date(b.date) - new Date(a.date));
+    allNotices = allNotices.slice(0, 10);
 
     // Re-assign IDs
     const finalNotices = allNotices.map((n, index) => ({
