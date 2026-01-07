@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const NOTICE_URL = 'https://www.soa.ac.in/iter-student-notice';
+const NOTICE_URL = 'https://www.soa.ac.in/iter-news-and-events';
 const DATA_FILE = path.join(__dirname, '../src/data/notices.json');
 
 async function scrapeNotices() {

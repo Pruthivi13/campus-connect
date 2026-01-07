@@ -18,56 +18,56 @@
         "type": "placement"
     },
     {
-        "id": 4,
+        "text": "Programme for 7th Semester Mid-Semester Examination, November 2025",
+        "date": "2025-11-08",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983-4y69t-fwd5l",
+        "isNew": true,
+        "id": 4
+    },
+    {
+        "text": "Programme for 5th Semester Mid-Semester Examination, November 2025",
+        "date": "2025-11-08",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983-4y69t",
+        "isNew": true,
+        "id": 5
+    },
+    {
+        "text": "Programme for 3rd Semester Mid-Semester Examination, November 2025",
+        "date": "2025-11-08",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983",
+        "isNew": true,
+        "id": 6
+    },
+    {
+        "text": "Programme for 1st Semester Mid-Semester Examination, November 2025",
+        "date": "2025-11-08",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025",
+        "isNew": true,
+        "id": 7
+    },
+    {
+        "id": 8,
         "text": "Semester 5 Results Announced - Check Student Portal",
         "date": "2025-10-20",
         "type": "academic"
     },
     {
-        "text": "Notice regarding class suspension for 7th Semester B.Tech. Students",
-        "date": "2024-01-13",
+        "text": "Holiday for Diwali",
+        "date": "2025-10-19",
         "type": "admin",
-        "link": "https://www.soa.ac.in/iter-student-notice/2024/1/13/notice-regarding-class-suspension-for-7th-semester-btech-students",
-        "isNew": true,
-        "id": 5
-    },
-    {
-        "text": "Notice for resumption of regular classes",
-        "date": "2024-01-01",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-student-notice/2024/1/1/notice-for-resumption-of-regular-classes",
-        "isNew": true,
-        "id": 6
-    },
-    {
-        "text": "Notice for suspension of classes",
-        "date": "2023-12-19",
-        "type": "admin",
-        "link": "https://www.soa.ac.in/iter-student-notice/2023/12/19/notice-for-suspension-of-classes",
-        "isNew": true,
-        "id": 7
-    },
-    {
-        "text": "Notice for resumption of regular classes",
-        "date": "2023-12-15",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-student-notice/2023/12/15/notice-for-resumption-of-regular-classes",
-        "isNew": true,
-        "id": 8
-    },
-    {
-        "text": "Notice regarding commencement of classes for B.Tech. and BCA Not Promotional and Late Promoted Students",
-        "date": "2023-10-30",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-student-notice/2023/10/30/notice-regarding-commencement-of-classes-for-btech-and-bca-not-promotional-and-late-promoted-students",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/19/partial-modification-to-holiday-list",
         "isNew": true,
         "id": 9
     },
     {
-        "text": "Notice regarding class suspension",
-        "date": "2023-10-16",
-        "type": "admin",
-        "link": "https://www.soa.ac.in/iter-student-notice/2023/10/16/notice-regarding-class-suspension",
+        "text": "Notice and Schedule for the Summer Quarter End Semester Examination of Non Promotional and Late Promoted Students",
+        "date": "2025-10-13",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/13/t4xn572g3sdgx75tve45qqy6toojqm",
         "isNew": true,
         "id": 10
     }
