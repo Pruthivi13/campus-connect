@@ -1,24 +1,184 @@
 [
     {
-        "id": 1,
+        "text": "Notice regarding class suspension for 7th Semester B.Tech. Students",
+        "date": "2024-01-13",
+        "type": "admin",
+        "link": "https://www.soa.ac.in/iter-student-notice/2024/1/13/notice-regarding-class-suspension-for-7th-semester-btech-students",
+        "isNew": true,
+        "id": 1
+    },
+    {
+        "text": "Notice for resumption of regular classes",
+        "date": "2024-01-01",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2024/1/1/notice-for-resumption-of-regular-classes",
+        "isNew": true,
+        "id": 2
+    },
+    {
+        "text": "Notice for suspension of classes",
+        "date": "2023-12-19",
+        "type": "admin",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/12/19/notice-for-suspension-of-classes",
+        "isNew": true,
+        "id": 3
+    },
+    {
+        "text": "Notice for resumption of regular classes",
+        "date": "2023-12-15",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/12/15/notice-for-resumption-of-regular-classes",
+        "isNew": true,
+        "id": 4
+    },
+    {
+        "text": "Notice regarding commencement of classes for B.Tech. and BCA Not Promotional and Late Promoted Students",
+        "date": "2023-10-30",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/10/30/notice-regarding-commencement-of-classes-for-btech-and-bca-not-promotional-and-late-promoted-students",
+        "isNew": true,
+        "id": 5
+    },
+    {
+        "text": "Notice regarding class suspension",
+        "date": "2023-10-16",
+        "type": "admin",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/10/16/notice-regarding-class-suspension",
+        "isNew": true,
+        "id": 6
+    },
+    {
+        "text": "Notice regarding commencement of 3rd Semester B.TECH..BCA, MCA, M.Sc. & M.TECH. Classes",
+        "date": "2023-09-07",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/9/7/notice-regarding-commencement-of-3rd-semester-btechbca-mca-msc-amp-mtech-classes",
+        "isNew": true,
+        "id": 7
+    },
+    {
+        "text": "Notice regarding commencement of 7th Semester B.Tech. classes",
+        "date": "2023-08-26",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/8/26/notice-regarding-commencement-of-5th-semester-btech-and-bca-classes-gghbz",
+        "isNew": true,
+        "id": 8
+    },
+    {
+        "text": "Notice regarding Summer Quarter classes of 1st Year BCA and MCA Students",
+        "date": "2023-07-25",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/7/25/notice-regarding-summer-quarter-classes-of-4th-year-btech-3rd-year-bca-and-2nd-year-mca-yp7c6-jl78g-49pdw-ehg93",
+        "isNew": true,
+        "id": 9
+    },
+    {
+        "text": "Notice regarding Summer Quarter classes of 1st Year B.Tech. Students",
+        "date": "2023-07-25",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/7/25/notice-regarding-summer-quarter-classes-of-4th-year-btech-3rd-year-bca-and-2nd-year-mca-yp7c6-jl78g-49pdw",
+        "isNew": true,
+        "id": 10
+    },
+    {
+        "text": "Notice regarding commencement of 5th Semester B.Tech. and BCA classes",
+        "date": "2023-08-26",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/8/26/notice-regarding-commencement-of-5th-semester-btech-and-bca-classes",
+        "isNew": true,
+        "id": 11
+    },
+    {
+        "text": "Notice regarding Summer Quarter classes of 3rd Year B.Tech. Students",
+        "date": "2023-07-25",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/7/25/notice-regarding-summer-quarter-classes-of-4th-year-btech-3rd-year-bca-and-2nd-year-mca-yp7c6-3y4ap",
+        "isNew": true,
+        "id": 12
+    },
+    {
+        "text": "Notice regarding Summer Quarter classes of 2nd Year BCA Students",
+        "date": "2023-07-25",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/7/25/notice-regarding-summer-quarter-classes-of-4th-year-btech-3rd-year-bca-and-2nd-year-mca-yp7c6-jl78g",
+        "isNew": true,
+        "id": 13
+    },
+    {
+        "text": "Notice regarding Summer Quarter classes of 2nd Year B.Tech. Students",
+        "date": "2023-07-25",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/7/25/notice-regarding-summer-quarter-classes-of-4th-year-btech-3rd-year-bca-and-2nd-year-mca-yp7c6",
+        "isNew": true,
+        "id": 14
+    },
+    {
+        "text": "Revised Notice regarding Pre-Placement Assessment",
+        "date": "2023-05-24",
+        "type": "placement",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/5/24/notice-regarding-pre-placement-assessment-cak76",
+        "isNew": true,
+        "id": 15
+    },
+    {
+        "text": "Notice regarding Summer Quarter classes of 4th Year B.Tech., 3rd Year BCA and 2nd Year MCA",
+        "date": "2023-07-25",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/7/25/notice-regarding-summer-quarter-classes-of-4th-year-btech-3rd-year-bca-and-2nd-year-mca",
+        "isNew": true,
+        "id": 16
+    },
+    {
+        "text": "Notice regarding disruption of transport dependent activities",
+        "date": "2023-06-27",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/6/27/iter-23-1649-2n339",
+        "isNew": true,
+        "id": 17
+    },
+    {
+        "text": "Notice regarding Preparatory Break for 2nd Semester Students",
+        "date": "2023-06-27",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/6/27/iter-23-1649",
+        "isNew": true,
+        "id": 18
+    },
+    {
+        "text": "Notice regarding Class Timing",
+        "date": "2023-06-12",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/6/12/iter-notice-1547",
+        "isNew": true,
+        "id": 19
+    },
+    {
+        "text": "Notice regarding Preparatory Break for 4th Semester Students",
+        "date": "2023-06-05",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-student-notice/2023/6/5/iter-notice-1487-ds8yw-rsnlz",
+        "isNew": true,
+        "id": 20
+    },
+    {
+        "id": 21,
         "text": "Placement Drive by Infosys on November 2025",
         "date": "2025-11-15",
         "type": "placement"
     },
     {
-        "id": 2,
+        "id": 22,
         "text": "Semester 5 Results Announced - Check Student Portal",
         "date": "2025-10-20",
         "type": "academic"
     },
     {
-        "id": 3,
+        "id": 23,
         "text": "Campus Closed for Winter Break starting Dec 24th",
         "date": "2025-12-01",
         "type": "admin"
     },
     {
-        "id": 4,
+        "id": 24,
         "text": "Guest Lecture on AI by Dr. Smith this Friday",
         "date": "2025-12-10",
         "type": "event"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -29,13 +30,15 @@ const Footer = () => {
             </p>
           </div>
 
+
+
           {/* Column 3: Quick Links */}
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="font-bold mb-4 text-green-700 dark:text-green-400 text-sm uppercase tracking-wide">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li><a href="#" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">About College</a></li>
-              <li><a href="#" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">Help & Support</a></li>
-              <li><a href="#" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">Privacy Policy</a></li>
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 text-center">
+              <li><a href="https://www.soa.ac.in/iter" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">About College</a></li>
+              <li><Link to="/help-support" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">Help & Support</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 

@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import resourcesData from '../data/resources.json';
 import ResourceCard from '../components/resources/ResourceCard';
 import Dropdown from '../components/common/Dropdown';
 import { Search, Filter, BookOpen, ChevronDown } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 
 const Resources = () => {
+  const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const query = searchParams.get('search');
+    if (query) {
+      setSearchTerm(query);
+    }
+  }, [searchParams]);
   const [filters, setFilters] = useState({
     semester: 'All',
     subject: 'All',

@@ -28,3 +28,17 @@ self.addEventListener('fetch', event => {
       })
   );
 });
+
+self.addEventListener('push', event => {
+  const data = event.data ? event.data.json() : {};
+  const title = data.title || 'New Notice';
+  const options = {
+    body: data.body || 'New content available on Campus Connect.',
+    icon: '/pwa-192x192.png',
+    badge: '/pwa-192x192.png'
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(title, options)
+  );
+});

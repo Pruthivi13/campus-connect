@@ -28,3 +28,7 @@
     ```bash
     npm run dev
     ```
+4.  Sync latest notices:
+    ```bash
+    npm run sync-notices
+    ```

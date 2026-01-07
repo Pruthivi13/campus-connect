@@ -1,10 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import noticesData from '../data/notices.json';
 import { Calendar, Bell, Info, Award, Search, BookOpen, AlertCircle } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 
 const Notices = () => {
+  const [searchParams] = useSearchParams();
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const query = searchParams.get('search');
+    if (query) {
+      setSearchTerm(query);
+    }
+  }, [searchParams]);
+
+  const handleSubscribe = async () => {
+    if (!('Notification' in window)) {
+      alert('This browser does not support desktop notification');
+      return;
+    }
+
+    const permission = await Notification.requestPermission();
+    if (permission === 'granted') {
+      new Notification('Subscribed!', {
+        body: 'You will now receive updates for new notices.',
+        icon: '/pwa-192x192.png'
+      });
+    }
+  };
 
   const getIcon = (type) => {
     switch (type) {
@@ -36,7 +60,11 @@ const Notices = () => {
     }
   };
 
-  const filteredNotices = noticesData.filter(notice => {
+  const safeNotices = Array.isArray(noticesData) 
+    ? noticesData 
+    : (Array.isArray(noticesData?.default) ? noticesData.default : []);
+
+  const filteredNotices = safeNotices.filter(notice => {
     const matchesFilter = filter === 'all' || notice.type === filter;
     const matchesSearch = notice.text.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
@@ -55,16 +83,25 @@ const Notices = () => {
         {/* Controls */}
         <div className="bg-white dark:bg-black/50 dark:border-green-500/20 p-6 rounded-2xl shadow-sm border border-gray-100 mb-8 backdrop-blur-sm">
 
-          {/* Search */}
-          <div className="relative mb-4">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search notices..."
-              className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-green-500/20 bg-gray-50 dark:bg-black text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+          {/* Search & Subscribe */}
+          <div className="flex gap-4 mb-4">
+            <div className="relative flex-1">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search notices..."
+                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-green-500/20 bg-gray-50 dark:bg-black text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500 transition-all"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <button
+              onClick={handleSubscribe}
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all shadow-lg shadow-green-500/30"
+            >
+              <Bell className="h-5 w-5" />
+              <span className="hidden sm:inline">Subscribe</span>
+            </button>
           </div>
 
           {/* Filter Buttons */}

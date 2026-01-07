@@ -1,14 +1,63 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Home, BookOpen, Bell, Map, Users } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import statusConfig from '../data/status.json';
+import noticesData from '../data/notices.json';
+import resourcesData from '../data/resources.json';
 import NoticeBoardTicker from './home/NoticeBoardTicker';
+import { Search as SearchIcon, Calendar } from 'lucide-react';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const navigate = useNavigate();
   const [status, setStatus] = useState({ isOpen: false, text: 'Checking...' });
+  const [searchQuery, setSearchQuery] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => setShowSuggestions(false);
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  const handleSearchChange = (e) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    
+    if (query.length > 0) {
+      setShowSuggestions(true);
+      const lowerQuery = query.toLowerCase();
+      
+      const filteredNotices = noticesData
+        .filter(n => n.text.toLowerCase().includes(lowerQuery))
+        .map(n => ({ ...n, type: n.type === 'event' ? 'event' : 'notice', title: n.text }))
+        .slice(0, 3);
+        
+      const filteredResources = resourcesData
+        .filter(r => r.title.toLowerCase().includes(lowerQuery) || r.subject.toLowerCase().includes(lowerQuery))
+        .map(r => ({ ...r, type: 'resource' }))
+        .slice(0, 3);
+
+      setSuggestions([...filteredNotices, ...filteredResources]);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
+
+  const handleSuggestionClick = (item) => {
+    setSearchQuery(''); // Clear search after selection
+    setShowSuggestions(false);
+    if (item.type === 'resource') {
+      navigate(`/resources?search=${encodeURIComponent(item.title)}`);
+    } else {
+      navigate(`/notices?search=${encodeURIComponent(item.title)}`);
+    }
+  };
 
   const navItems = [
     { name: 'Home', path: '/', icon: Home },
@@ -153,18 +202,57 @@ const Header = () => {
         </nav>
 
         {/* Row 3: Search Bar */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 relative z-50">
           <div className="relative w-full max-w-2xl">
-            <input
-              type="text"
-              placeholder="Search notices, resources, or events..."
-              className="w-full pl-14 pr-6 py-3.5 rounded-full border-2 border-green-500 dark:border-[#14AE5C] bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400/50 dark:focus:ring-[#14AE5C]/50 focus:border-green-400 dark:focus:border-[#14AE5C] transition-all duration-300"
-            />
-            <div className="absolute left-1.5 top-1/2 -translate-y-1/2 bg-green-500 dark:bg-[#14AE5C] dark:shadow-[0_0_12px_rgba(20,174,92,0.7)] p-2.5 rounded-full">
-              <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search notices, resources, or events..."
+                className="w-full pl-14 pr-6 py-3.5 rounded-full border-2 border-green-500 dark:border-[#14AE5C] bg-white text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400/50 dark:focus:ring-[#14AE5C]/50 focus:border-green-400 dark:focus:border-[#14AE5C] transition-all duration-300"
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onFocus={() => searchQuery.length > 0 && setShowSuggestions(true)}
+              />
+              <div className="absolute left-1.5 top-1/2 -translate-y-1/2 bg-green-500 dark:bg-[#14AE5C] dark:shadow-[0_0_12px_rgba(20,174,92,0.7)] p-2.5 rounded-full">
+                <SearchIcon className="h-5 w-5 text-white" />
+              </div>
             </div>
+
+            {/* Suggestions Dropdown */}
+            {showSuggestions && suggestions.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#0a0a0a] rounded-2xl shadow-xl dark:shadow-[0_0_30px_-5px_rgba(20,174,92,0.3)] border border-gray-100 dark:border-green-500/20 overflow-hidden max-h-[400px] overflow-y-auto">
+                <div className="py-2">
+                  {suggestions.map((item, index) => (
+                    <div
+                      key={`${item.type}-${item.id}-${index}`}
+                      onClick={() => handleSuggestionClick(item)}
+                      className="px-5 py-3 hover:bg-green-50 dark:hover:bg-green-900/10 cursor-pointer transition-colors flex items-center gap-3 group border-b border-gray-50 dark:border-gray-800/50 last:border-0"
+                    >
+                      <div className={`p-2 rounded-lg ${
+                        item.type === 'resource' 
+                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                          : item.type === 'notice'
+                          ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400'
+                          : 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400' 
+                      }`}>
+                        {item.type === 'resource' && <BookOpen className="h-4 w-4" />}
+                        {item.type === 'notice' && <Bell className="h-4 w-4" />}
+                        {item.type === 'event' && <Calendar className="h-4 w-4" />}
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-800 dark:text-gray-200 truncate group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors">
+                          {item.title}
+                        </p>
+                        <p className="text-xs text-gray-500 dark:text-gray-500 truncate capitalize">
+                          {item.type} • {item.date || item.subject || 'General'}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

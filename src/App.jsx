@@ -7,6 +7,9 @@ import Notices from './pages/Notices';
 import CampusMap from './pages/CampusMap';
 import AboutUs from './pages/AboutUs';
 
+import HelpSupport from './pages/HelpSupport';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+
 function App() {
   return (
     <Layout>
@@ -16,6 +19,8 @@ function App() {
         <Route path="/notices" element={<Notices />} />
         <Route path="/map" element={<CampusMap />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/help-support" element={<HelpSupport />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </Layout>
   );

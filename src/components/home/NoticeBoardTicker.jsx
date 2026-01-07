@@ -3,6 +3,16 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import noticesData from '../../data/notices.json';
 
 const NoticeBoardTicker = () => {
+  // Sort by date (descending) and take top 5
+  // Safety check: ensure noticesData is an array, handling potential ESM/CommonJS interop
+  const safeNotices = Array.isArray(noticesData) 
+    ? noticesData 
+    : (Array.isArray(noticesData?.default) ? noticesData.default : []);
+  
+  const displayedNotices = [...safeNotices]
+    .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
+    .slice(0, 5);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -11,7 +21,7 @@ const NoticeBoardTicker = () => {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % noticesData.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedNotices.length);
     }, 4000); // 4 seconds interval
 
     return () => clearInterval(interval);
@@ -19,15 +29,15 @@ const NoticeBoardTicker = () => {
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? noticesData.length - 1 : prevIndex - 1
+      prevIndex === 0 ? displayedNotices.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % noticesData.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedNotices.length);
   };
 
-  if (!noticesData || noticesData.length === 0) return null;
+  if (!displayedNotices || displayedNotices.length === 0) return null;
 
   return (
     <div 
@@ -49,12 +59,12 @@ const NoticeBoardTicker = () => {
         {/* Content Area */}
         <div className="flex-1 flex flex-col items-center justify-center text-center overflow-hidden">
           <p className="text-gray-800 dark:text-white font-medium text-base truncate w-full px-4 mb-2">
-            {noticesData[currentIndex].text}
+            {displayedNotices[currentIndex].text}
           </p>
           
           {/* Pagination Dots */}
           <div className="flex items-center gap-1.5">
-            {noticesData.map((_, idx) => (
+            {displayedNotices.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
