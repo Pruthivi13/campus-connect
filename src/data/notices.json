@@ -1,11 +1,27 @@
 [
     {
+        "text": "Schedule for 3rd Semester End-Semester Theory Examination",
+        "date": "2026-01-08",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w",
+        "isNew": true,
+        "id": 1
+    },
+    {
+        "text": "Schedule for 7th Semester End-Semester Theory Examination",
+        "date": "2026-01-08",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination",
+        "isNew": true,
+        "id": 2
+    },
+    {
         "text": "Programme for 7th Semester Mid-Semester Examination, November 2025",
         "date": "2025-11-08",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983-4y69t-fwd5l",
         "isNew": true,
-        "id": 1
+        "id": 3
     },
     {
         "text": "Programme for 5th Semester Mid-Semester Examination, November 2025",
@@ -13,7 +29,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983-4y69t",
         "isNew": true,
-        "id": 2
+        "id": 4
     },
     {
         "text": "Programme for 3rd Semester Mid-Semester Examination, November 2025",
@@ -21,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983",
         "isNew": true,
-        "id": 3
+        "id": 5
     },
     {
         "text": "Programme for 1st Semester Mid-Semester Examination, November 2025",
@@ -29,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025",
         "isNew": true,
-        "id": 4
+        "id": 6
     },
     {
         "text": "Holiday for Diwali",
@@ -37,7 +53,7 @@
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/19/partial-modification-to-holiday-list",
         "isNew": true,
-        "id": 5
+        "id": 7
     },
     {
         "text": "Notice and Schedule for the Summer Quarter End Semester Examination of Non Promotional and Late Promoted Students",
@@ -45,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/13/t4xn572g3sdgx75tve45qqy6toojqm",
         "isNew": true,
-        "id": 6
+        "id": 8
     },
     {
         "text": "Notice regarding commencement of regular classes for 1st Semester M.Sc. Students",
@@ -53,29 +69,13 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/9/6ydxo2ba64u3kexkd8p80e8e2vuoqw",
         "isNew": true,
-        "id": 7
+        "id": 9
     },
     {
         "text": "Notice regarding Class Suspension",
         "date": "2025-09-22",
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/9/22/notice-regarding-class-suspension-fly4p",
-        "isNew": true,
-        "id": 8
-    },
-    {
-        "text": "Notice regarding Class Suspension (22-09-2025)",
-        "date": "2025-09-22",
-        "type": "admin",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2025/9/22/notice-regarding-class-suspension",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Notice and Schedule for the Summer Quarter End Semester Examination for 1st Year Students",
-        "date": "2025-09-12",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2025/9/12/notice-and-schedule-for-the-summer-quarter-end-semester-examination-for-1st-year-students",
         "isNew": true,
         "id": 10
     }
