@@ -1,31 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import noticesData from '../../data/notices.json';
+import { useNotices } from '../../hooks/useNotices';
 
 const NoticeBoardTicker = () => {
-  // Sort by date (descending) and take top 5
-  // Safety check: ensure noticesData is an array, handling potential ESM/CommonJS interop
-  const safeNotices = Array.isArray(noticesData) 
-    ? noticesData 
-    : (Array.isArray(noticesData?.default) ? noticesData.default : []);
-  
-  const displayedNotices = [...safeNotices]
-    .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
-    .slice(0, 5);
+  // Fetch top 5 notices dynamically from API
+  const { notices: displayedNotices, loading } = useNotices(5);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   // Auto-scroll logic
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || displayedNotices.length === 0) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedNotices.length);
     }, 4000); // 4 seconds interval
 
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, displayedNotices.length]);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => 
@@ -37,7 +30,7 @@ const NoticeBoardTicker = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % displayedNotices.length);
   };
 
-  if (!displayedNotices || displayedNotices.length === 0) return null;
+  if (loading || !displayedNotices || displayedNotices.length === 0) return null;
 
   return (
     <div 

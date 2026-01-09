@@ -1,8 +1,9 @@
 import React from 'react';
-import noticesData from '../../data/notices.json';
-import { Calendar, Bell, Info, Award } from 'lucide-react';
+import { useNotices } from '../../hooks/useNotices';
+import { Calendar, Bell, Info, Award, Loader2 } from 'lucide-react';
 
 const NoticeBoard = () => {
+    const { notices: noticesData, loading } = useNotices(10);
     const getIcon = (type) => {
         switch (type) {
             case 'placement': return <Award className="h-5 w-5 text-purple-500" />;
@@ -34,7 +35,11 @@ const NoticeBoard = () => {
             </div>
 
             <div className="divide-y divide-gray-100 dark:divide-gray-700">
-                {noticesData.map((notice) => (
+                {loading ? (
+                    <div className="p-8 flex items-center justify-center">
+                        <Loader2 className="h-6 w-6 text-green-600 animate-spin" />
+                    </div>
+                ) : noticesData.map((notice) => (
                     <div key={notice.id} className="p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors cursor-pointer group">
                         <div className="flex gap-4">
                             <div className={`flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center ${getTypeColor(notice.type)} bg-opacity-50`}>
