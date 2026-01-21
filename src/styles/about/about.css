@@ -3,11 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    --primary-green: #14AE5C;
+    --primary-green: #00C26E;
     --light-green: #a8e6d3;
     --very-light-green: #d4f5f0;
     --dark-text: #333;
     --light-text: #666;
+    --overlay-dark: rgba(0, 0, 0, 0.65);
+    --glass-card: rgba(255, 255, 255, 0.12);
+}
+
+/* About Page Container */
+.about-page-container {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #14AE5C 100%);
+    min-height: 100vh;
+}
+
+.dark .about-page-container {
+    background: linear-gradient(to bottom, #000000 0%, #0a5c2e 100%);
 }
 
 /* Hero Section */
@@ -220,83 +234,64 @@
     margin: 0 auto;
 }
 
-.about-flip-card {
+.about-team-card-wrapper {
     width: 280px;
     height: 420px;
-    perspective: 1200px;
-    cursor: pointer;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
-.about-flip-card:hover {
+.about-team-card-wrapper:hover {
     transform: translateY(-4px);
 }
 
-.about-flip-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.8s cubic-bezier(.4, .2, .2, 1);
-    transform-style: preserve-3d;
-}
 
-.about-flip-card:hover .about-flip-inner {
-    transform: rotateY(180deg);
-}
-
-.about-flip-inner.flipped {
-    transform: rotateY(180deg);
-}
-
-.about-flip-front,
-.about-flip-back {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    border-radius: 18px;
-    overflow: hidden;
-}
-
-.about-flip-front {
-    background: transparent;
-}
-
-.about-flip-back {
-    background: linear-gradient(135deg, #dff7ec, #c8f0dc);
-    transform: rotateY(180deg);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
 
 .about-team-card {
     position: relative;
     width: 280px;
     height: 420px;
     background: white;
-    border-radius: 26px;
-    padding: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    border-radius: 24px;
+    padding: 20px;
+    overflow: visible;
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
     cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dark .about-team-card {
+    background: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-team-card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dark .about-team-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 .about-card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 18px;
+    border-radius: 20px;
+    transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    position: relative;
+    z-index: 0;
+}
+
+.about-team-card:hover .about-card-img {
+    transform: scale(1.08);
 }
 
 .about-overlay {
     position: absolute;
-    inset: 12px;
-    border-radius: 18px;
+    inset: 20px;
+    border-radius: 20px;
     pointer-events: none;
     overflow: hidden;
 }
@@ -304,24 +299,21 @@
 .about-overlay::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 45%;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    mask-image: linear-gradient(to top,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.25),
-            rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to top,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.25),
-            rgba(0, 0, 0, 0));
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.3) 100%);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.about-team-card:hover .about-overlay::after {
+    background: var(--overlay-dark);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .about-content {
@@ -330,45 +322,71 @@
     left: 24px;
     right: 24px;
     color: white;
-    z-index: 2;
+    z-index: 15;
     text-align: left;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.about-team-card:hover .about-content h3 {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .about-content h3 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
     color: white;
+    transition: all 0.4s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-content p {
     font-size: 12px;
-    opacity: 0.9;
-    margin: 0;
+    opacity: 0.95;
+    margin: 0 0 12px 0;
     line-height: 1.4;
+    transition: all 0.4s ease;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.7);
 }
+
+
 
 .about-actions {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 12px;
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
 }
 
 .about-connect-btn {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     color: #222;
     border: none;
     padding: 10px 18px;
-    border-radius: 12px;
+    border-radius: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
 }
 
 .about-connect-btn:hover {
     background: var(--primary-green);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 174, 92, 0.3);
 }
 
 .about-icon-box {
@@ -438,21 +456,158 @@
     font-weight: 600;
 }
 
-.about-badge {
+/* Hover Overlay - Centered Green Info Bar */
+.about-hover-overlay {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: #19b56f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: calc(100% - 48px);
+    background: var(--primary-green);
+    border-radius: 22px;
+    padding: 20px 24px;
+    z-index: 11;
+    pointer-events: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.about-team-card:hover .about-hover-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.about-emoji-icon {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 42px;
+    height: 42px;
+    background: white;
+    border-radius: 50%;
+    padding: 0;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    line-height: 1;
+    animation: iconPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 0.1s;
+    transform: scale(0);
+}
+
+@keyframes iconPop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.about-hover-content {
+    text-align: left;
     color: white;
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 13px;
+}
+
+.about-hover-content h4 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: white;
+    line-height: 1.3;
+}
+
+.about-hover-content p {
+    font-size: 0.875rem;
+    margin: 6px 0;
+    line-height: 1.5;
+    color: white;
+}
+
+.about-hover-role {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.about-hover-skills {
     font-weight: 500;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Leader Badge - Green Accent Floating Above Buttons */
+.about-leader-badge {
+    position: absolute;
+    bottom: 68px;
+    left: 24px;
+    background: var(--primary-green);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 22px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 194, 110, 0.3);
     display: flex;
     align-items: center;
     gap: 6px;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
+
+.about-team-card:hover .about-leader-badge {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Personality Bubble - Thought Bubble Protruding Outside Card */
+.about-personality-bubble {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 4px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #1a1a1a;
+    font-size: 12px;
+    line-height: 1.5;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    pointer-events: none;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-weight: 500;
+}
+
+.dark .about-personality-bubble {
+    background: var(--glass-card);
+    color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.about-team-card:hover .about-personality-bubble {
+    opacity: 1;
+    transform: scale(1.08);
+    background: white;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.dark .about-team-card:hover .about-personality-bubble {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+
+
 
 /* Vision Board Section */
 .about-vision-board {
@@ -808,6 +963,11 @@
     gap: 1.5rem;
 }
 
+.dark .about-contact-form {
+    background: #1a1a1a;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
 .about-form-group {
     display: flex;
     flex-direction: column;
@@ -819,6 +979,10 @@
     font-weight: 600;
     color: #333;
     margin-bottom: 0.3rem;
+}
+
+.dark .about-form-group label {
+    color: #e5e5e5;
 }
 
 .about-form-input,
@@ -833,9 +997,20 @@
     color: #666;
 }
 
+.dark .about-form-input,
+.dark .about-form-textarea {
+    background: #2a2a2a;
+    color: #e5e5e5;
+}
+
 .about-form-input::placeholder,
 .about-form-textarea::placeholder {
     color: #999;
+}
+
+.dark .about-form-input::placeholder,
+.dark .about-form-textarea::placeholder {
+    color: #666;
 }
 
 .about-form-input:focus,
@@ -843,6 +1018,12 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(20, 174, 92, 0.1);
     background: white;
+}
+
+.dark .about-form-input:focus,
+.dark .about-form-textarea:focus {
+    background: #333;
+    box-shadow: 0 0 0 3px rgba(20, 174, 92, 0.3);
 }
 
 .about-form-textarea {
@@ -889,9 +1070,18 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.dark .about-method-card {
+    background: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
 .about-method-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark .about-method-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 .about-method-icon {
@@ -909,10 +1099,18 @@
     font-weight: 600;
 }
 
+.dark .about-method-card h4 {
+    color: #e5e5e5;
+}
+
 .about-method-card p {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+.dark .about-method-card p {
+    color: #b0b0b0;
 }
 
 /* Responsive styles for new sections */

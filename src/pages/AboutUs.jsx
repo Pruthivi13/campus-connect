@@ -10,10 +10,7 @@ import AboutMobileDesign from '../components/about/AboutMobileDesign';
 
 const AboutUs = () => {
   return (
-    <div className="relative z-10" style={{
-      background: 'linear-gradient(to bottom, #FFFFFF 0%, #14AE5C 100%)',
-      minHeight: '100vh'
-    }}>
+    <div className="about-page-container">
       <AboutHero />
       <AboutFeatures />
       <AboutTeam />
