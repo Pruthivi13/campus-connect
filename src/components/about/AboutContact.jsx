@@ -7,6 +7,7 @@ export default function AboutContact() {
         email: '',
         message: ''
     });
+    const [status, setStatus] = useState('idle'); // idle, sending, success, error
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -16,11 +17,42 @@ export default function AboutContact() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        alert('Message sent! We will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
+        setStatus('sending');
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: '2f9ae985-ee43-442f-9285-e3acacd2ffaa',
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    from_name: 'Campus Connect',
+                    subject: `New Contact Form Submission from ${formData.name}`
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 5000);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
     };
 
     return (
@@ -56,6 +88,7 @@ export default function AboutContact() {
                                 onChange={handleChange}
                                 required
                                 className="about-form-input"
+                                disabled={status === 'sending'}
                             />
                         </div>
                         <div className="about-form-group">
@@ -69,6 +102,7 @@ export default function AboutContact() {
                                 onChange={handleChange}
                                 required
                                 className="about-form-input"
+                                disabled={status === 'sending'}
                             />
                         </div>
                         <div className="about-form-group">
@@ -82,9 +116,19 @@ export default function AboutContact() {
                                 onChange={handleChange}
                                 required
                                 className="about-form-textarea"
+                                disabled={status === 'sending'}
                             ></textarea>
                         </div>
-                        <button type="submit" className="about-submit-btn">Send Message</button>
+                        <button 
+                            type="submit" 
+                            className="about-submit-btn"
+                            disabled={status === 'sending'}
+                        >
+                            {status === 'sending' ? 'Sending...' : 
+                             status === 'success' ? '✓ Message Sent!' : 
+                             status === 'error' ? 'Failed - Try Again' : 
+                             'Send Message'}
+                        </button>
                     </form>
                 </div>
             </div>
@@ -98,7 +142,7 @@ export default function AboutContact() {
                         </svg>
                     </div>
                     <h4>Email</h4>
-                    <p>mail.to.pruthivi@gmail.com</p>
+                    <p>campusconnectforstudents@gmail.com</p>
                 </div>
                 <div className="about-method-card">
                     <div className="about-method-icon">
@@ -124,3 +168,4 @@ export default function AboutContact() {
         </section>
     );
 }
+
