@@ -1,0 +1,126 @@
+import React, { useState } from 'react';
+import '../../styles/about/about.css';
+
+export default function AboutContact() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+        alert('Message sent! We will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' });
+    };
+
+    return (
+        <section className="about-contact">
+            <h2 className="about-contact-title">Contact Us</h2>
+            <div className="about-contact-container">
+                <div className="about-contact-left">
+                    <div className="about-contact-illustration">
+                        <img
+                            src="/about-assets/human-support.svg"
+                            alt="Customer Support"
+                            className="about-support-image"
+                        />
+                    </div>
+                    <div className="about-contact-text">
+                        <p>Request changes,</p>
+                        <p>suggest additions,</p>
+                        <p>or get help with</p>
+                        <p>the portal.</p>
+                    </div>
+                </div>
+
+                <div className="about-contact-right">
+                    <form className="about-contact-form" onSubmit={handleSubmit}>
+                        <div className="about-form-group">
+                            <label htmlFor="name">Your Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                                className="about-form-input"
+                            />
+                        </div>
+                        <div className="about-form-group">
+                            <label htmlFor="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your.email@campus.edu"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                className="about-form-input"
+                            />
+                        </div>
+                        <div className="about-form-group">
+                            <label htmlFor="message">Your Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Describe your request or suggestion..."
+                                rows="4"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                className="about-form-textarea"
+                            ></textarea>
+                        </div>
+                        <button type="submit" className="about-submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div className="about-contact-methods">
+                <div className="about-method-card">
+                    <div className="about-method-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="M3 7l9 6 9-6" />
+                        </svg>
+                    </div>
+                    <h4>Email</h4>
+                    <p>mail.to.pruthivi@gmail.com</p>
+                </div>
+                <div className="about-method-card">
+                    <div className="about-method-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M9 3v18M3 9h18" />
+                        </svg>
+                    </div>
+                    <h4>Response Time</h4>
+                    <p>Within 24 hours</p>
+                </div>
+                <div className="about-method-card">
+                    <div className="about-method-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <h4>Support</h4>
+                    <p>24/7 Available</p>
+                </div>
+            </div>
+        </section>
+    );
+}
