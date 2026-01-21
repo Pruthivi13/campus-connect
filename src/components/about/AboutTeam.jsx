@@ -62,7 +62,15 @@ export default function AboutTeam() {
                                 <h3>{member.name}</h3>
 
                                 <div className="about-actions">
-                                    <a href={`mailto:${member.email}`} className="about-connect-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>Get in Touch</a>
+                                    <button 
+                                        onClick={() => {
+                                            window.open(`https://mail.google.com/mail/?view=cm&to=${member.email}`, '_blank');
+                                        }} 
+                                        className="about-connect-btn"
+                                        type="button"
+                                    >
+                                        Get in Touch
+                                    </button>
 
                                     <a href={member.github} target="_blank" rel="noopener noreferrer" className="about-icon-box">
                                         <svg viewBox="0 0 24 24" fill="currentColor">
