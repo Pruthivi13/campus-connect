@@ -123,46 +123,43 @@ const Header = () => {
         className={`absolute inset-0 bg-gradient-to-b from-black via-[#0a2a12] to-[#0d5a1d] transition-opacity duration-300 ease-in-out ${theme === 'dark' ? 'opacity-100' : 'opacity-0'
           }`}
       />
-      <div className="max-w-6xl mx-auto px-8 pt-4 pb-28 relative z-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 pt-4 pb-28 relative z-20">
 
         {/* Row 1: Logo and Right Actions */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-4 sm:mb-8">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            {/* Logo Container */}
-            <div className="relative h-[180px] w-[500px]">
-              <img
-                src={`/logo.png?v=${new Date().getTime()}`}
-                alt="Campus Connect Logo"
-                className="h-full w-auto object-contain object-left scale-150 origin-left transition-all duration-500 ease-in-out"
-              />
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src={`/logo.png?v=${new Date().getTime()}`}
+              alt="Campus Connect Logo"
+              className="h-32 sm:h-44 md:h-52 w-auto object-contain"
+            />
           </Link>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="relative w-16 h-8 rounded-full bg-white/50 dark:bg-gray-800/50 border-0 outline-none transition-colors duration-300"
+              className="relative w-12 sm:w-16 h-6 sm:h-8 rounded-full bg-white/50 dark:bg-gray-800/50 border-0 outline-none transition-colors duration-300"
               aria-label="Toggle Theme"
             >
               <div
-                className={`absolute top-0.5 h-7 w-7 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out ${theme === 'dark'
-                  ? 'left-8 bg-gray-800'
+                className={`absolute top-0.5 h-5 sm:h-7 w-5 sm:w-7 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out ${theme === 'dark'
+                  ? 'left-6 sm:left-8 bg-gray-800'
                   : 'left-0.5 bg-[#14AE5C]'
                   }`}
               >
                 {theme === 'dark' ? (
-                  <Sun className="h-4 w-4 text-yellow-400" />
+                  <Sun className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" />
                 ) : (
-                  <Moon className="h-4 w-4 text-white" />
+                  <Moon className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                 )}
               </div>
             </button>
 
-            {/* Campus Status Badge */}
-            <div className="relative flex items-center gap-2 bg-white dark:bg-gray-800 rounded-xl pl-5 pr-2 py-2 shadow-sm transition-all">
+            {/* Campus Status Badge - Hidden on very small screens, compact on mobile */}
+            <div className="hidden sm:flex relative items-center gap-2 bg-white dark:bg-gray-800 rounded-xl pl-5 pr-2 py-2 shadow-sm transition-all">
               {/* Status Dot */}
               <div className={`absolute top-2 left-2 h-2 w-2 rounded-full ${status.isOpen ? 'bg-[#14AE5C]' : 'bg-red-500'} animate-pulse`} />
 
@@ -175,25 +172,33 @@ const Header = () => {
                 {status.text}
               </span>
             </div>
+            
+            {/* Compact Status Badge for Mobile */}
+            <div className={`sm:hidden flex items-center gap-1.5 px-2 py-1.5 rounded-lg ${status.isOpen ? 'bg-green-100 dark:bg-green-900/30' : 'bg-red-100 dark:bg-red-900/30'}`}>
+              <div className={`h-2 w-2 rounded-full ${status.isOpen ? 'bg-[#14AE5C]' : 'bg-red-500'} animate-pulse`} />
+              <span className={`text-xs font-semibold ${status.isOpen ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}`}>
+                {status.text}
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Row 2: Navigation with Icons */}
-        <nav className="flex justify-center mb-6">
-          <ul className="flex items-center gap-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm px-3 py-2 rounded-full shadow-md dark:border dark:border-[#14AE5C]/30">
+        {/* Row 2: Navigation with Icons - Icons only on mobile */}
+        <nav className="flex justify-center mb-4 sm:mb-6">
+          <ul className="flex items-center gap-1 sm:gap-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm px-2 sm:px-3 py-1.5 sm:py-2 rounded-full shadow-md dark:border dark:border-[#14AE5C]/30">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               return (
                 <li key={item.name}>
                   <Link
                     to={item.path}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive(item.path)
+                    className={`flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${isActive(item.path)
                       ? 'bg-green-500 text-white dark:bg-[#14AE5C] dark:shadow-[0_0_15px_rgba(20,174,92,0.6)]'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-[#14AE5C]/20'
                       }`}
                   >
                     <IconComponent className="h-4 w-4" />
-                    {item.name}
+                    <span className="hidden md:inline">{item.name}</span>
                   </Link>
                 </li>
               );
@@ -264,14 +269,14 @@ const Header = () => {
       </div>
 
       {/* Bottom Curved Section - Concave (Inward at Center) */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30">
+      <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-none z-30">
         <svg
-          className="relative block w-full h-[80px]"
-          viewBox="0 0 1440 80"
+          className="relative block w-full h-[82px]"
+          viewBox="0 0 1440 82"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,80 Q720,0 1440,80 L1440,80 L0,80 Z"
+            d="M0,80 Q720,0 1440,80 L1440,82 L0,82 Z"
             fill="currentColor"
             className="text-white dark:text-black transition-colors duration-300"
           />

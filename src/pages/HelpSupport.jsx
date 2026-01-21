@@ -10,23 +10,23 @@ const HelpSupport = () => {
         <div className="grid gap-8">
           
           {/* Contact Section */}
-          <div className="bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-500/20 rounded-2xl p-8 shadow-sm">
-            <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 text-green-700 dark:text-green-400">
-              <MessageCircle className="w-6 h-6" />
+          <div className="bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-500/20 rounded-2xl p-4 sm:p-8 shadow-sm">
+            <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2 text-green-700 dark:text-green-400">
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
               Contact Us
             </h2>
-            <div className="space-y-4">
-               <div className="flex items-center gap-3 text-slate-700 dark:text-gray-300">
-                <Mail className="w-5 h-5 text-green-600 dark:text-green-500" />
-                <span>mail.to.pruthivi@gmail.com</span>
+            <div className="space-y-3 sm:space-y-4">
+               <div className="flex items-start gap-3 text-slate-700 dark:text-gray-300">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 dark:text-green-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm sm:text-base break-all">campusconnectforstudents@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-slate-700 dark:text-gray-300">
-                <Phone className="w-5 h-5 text-green-600 dark:text-green-500" />
-                <span>9337005825</span>
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">+91 98765 43210</span>
               </div>
-              <div className="flex items-center gap-3 text-slate-700 dark:text-gray-300">
-                <MapPin className="w-5 h-5 text-green-600 dark:text-green-500" />
-                <span>Campus Address, City</span>
+              <div className="flex items-start gap-3 text-slate-700 dark:text-gray-300">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 dark:text-green-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm sm:text-base">Jagamara, Khandagiri, Bhubaneswar - 751030, Odisha, India</span>
               </div>
             </div>
           </div>

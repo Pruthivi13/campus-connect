@@ -112,7 +112,7 @@ const Home = () => {
       <div>
         <div className="flex justify-between items-end mb-6">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Recent Notices</h2>
-          <Link to="/notices" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-all active:scale-95 dark:shadow-lg dark:shadow-green-500/50">
+          <Link to="/notices" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-all active:scale-95 dark:shadow-lg dark:shadow-green-500/50 flex items-center justify-center text-center">
             View All Notices
           </Link>
         </div>

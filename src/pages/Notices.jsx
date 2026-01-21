@@ -105,7 +105,7 @@ const Notices = () => {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex gap-3 overflow-visible pb-4 px-2 py-2">
+          <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
             {[
               { key: 'all', label: 'All' },
               { key: 'academic', label: 'Academic' },
@@ -116,7 +116,7 @@ const Notices = () => {
               <button
                 key={type.key}
                 onClick={() => setFilter(type.key)}
-                className={`px-6 py-3 rounded-xl text-sm font-bold capitalize whitespace-nowrap transition-all ${filter === type.key
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-bold capitalize whitespace-nowrap transition-all flex-shrink-0 ${filter === type.key
                   ? 'bg-green-600 text-white shadow-lg shadow-green-500/50 dark:shadow-green-500/60 hover:bg-green-700'
                   : 'bg-gray-300 dark:bg-[#2a2a2a] text-gray-700 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-[#3a3a3a]'
                   }`}
