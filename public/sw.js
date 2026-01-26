@@ -34,8 +34,8 @@ self.addEventListener('push', event => {
   const title = data.title || 'New Notice';
   const options = {
     body: data.body || 'New content available on Campus Connect.',
-    icon: '/pwa-192x192.png',
-    badge: '/pwa-192x192.png'
+    icon: '/app logo.png',
+    badge: '/app logo.png'
   };
 
   event.waitUntil(

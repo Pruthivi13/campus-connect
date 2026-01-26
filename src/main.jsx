@@ -5,12 +5,16 @@ import './index.css'
 import App from './App.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 
-// Unregister any existing service workers to fix the "TaskMaster" caching issue
+// Register service worker for PWA support (app drawer installation)
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then((registrations) => {
-    for (const registration of registrations) {
-      registration.unregister();
-    }
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('ServiceWorker registered successfully:', registration.scope);
+      })
+      .catch((error) => {
+        console.log('ServiceWorker registration failed:', error);
+      });
   });
 }
 
