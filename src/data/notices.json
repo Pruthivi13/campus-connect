@@ -1,11 +1,27 @@
 [
     {
+        "text": "Notice regarding shifting of End-Semester Lab Examination of 3rd Semester Students",
+        "date": "2026-01-27",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/27/notice-regarding-shifting-of-end-semester-theory-examination-of-1st-amp-5th-semester-students-8ebfh",
+        "isNew": true,
+        "id": 1
+    },
+    {
+        "text": "Notice regarding shifting of End-Semester Theory Examination of 1st & 5th Semester Students",
+        "date": "2026-01-27",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/27/notice-regarding-shifting-of-end-semester-theory-examination-of-1st-amp-5th-semester-students",
+        "isNew": true,
+        "id": 2
+    },
+    {
         "text": "Schedule for 1st Semester End-Semester Theory Examination",
         "date": "2026-01-08",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w-bake9-a7bns",
         "isNew": true,
-        "id": 1
+        "id": 3
     },
     {
         "text": "Schedule for 5th Semester End-Semester Theory Examination",
@@ -13,7 +29,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w-bake9",
         "isNew": true,
-        "id": 2
+        "id": 4
     },
     {
         "text": "Schedule for 3rd Semester End-Semester Theory Examination",
@@ -21,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w",
         "isNew": true,
-        "id": 3
+        "id": 5
     },
     {
         "text": "Schedule for 7th Semester End-Semester Theory Examination",
@@ -29,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination",
         "isNew": true,
-        "id": 4
+        "id": 6
     },
     {
         "text": "Programme for 7th Semester Mid-Semester Examination, November 2025",
@@ -37,7 +53,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983-4y69t-fwd5l",
         "isNew": true,
-        "id": 5
+        "id": 7
     },
     {
         "text": "Programme for 5th Semester Mid-Semester Examination, November 2025",
@@ -45,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983-4y69t",
         "isNew": true,
-        "id": 6
+        "id": 8
     },
     {
         "text": "Programme for 3rd Semester Mid-Semester Examination, November 2025",
@@ -53,29 +69,13 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025-76983",
         "isNew": true,
-        "id": 7
+        "id": 9
     },
     {
         "text": "Programme for 1st Semester Mid-Semester Examination, November 2025",
         "date": "2025-11-08",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2025/11/8/programme-for-btech-1st-semester-mid-semester-examination-november-2025",
-        "isNew": true,
-        "id": 8
-    },
-    {
-        "text": "Holiday for Diwali",
-        "date": "2025-10-19",
-        "type": "admin",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/19/partial-modification-to-holiday-list",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Notice and Schedule for the Summer Quarter End Semester Examination of Non Promotional and Late Promoted Students",
-        "date": "2025-10-13",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2025/10/13/t4xn572g3sdgx75tve45qqy6toojqm",
         "isNew": true,
         "id": 10
     }
