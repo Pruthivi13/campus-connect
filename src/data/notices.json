@@ -1,11 +1,19 @@
 [
     {
+        "text": "Notice regarding Revised Time Table",
+        "date": "2026-04-04",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/4/notice-regarding-revised-time-table",
+        "isNew": true,
+        "id": 1
+    },
+    {
         "text": "Notice regarding Class Suspension",
         "date": "2026-03-26",
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/26/notice-regarding-class-suspension",
         "isNew": true,
-        "id": 1
+        "id": 2
     },
     {
         "text": "Mid Semester Review of Final Year Research Project",
@@ -13,7 +21,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/25/6rzv9qppd7s4cf0sdo82zxldrnfbyo",
         "isNew": true,
-        "id": 2
+        "id": 3
     },
     {
         "text": "Notice regarding class suspension",
@@ -21,7 +29,7 @@
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/3/notice-regarding-class-suspension",
         "isNew": true,
-        "id": 3
+        "id": 4
     },
     {
         "text": "Notice regarding commencement of classes for Non Promotional and Late Promoted Students",
@@ -29,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/2/notice-regarding-commencement-of-classes-for-non-promotional-and-late-promoted-students",
         "isNew": true,
-        "id": 4
+        "id": 5
     },
     {
         "text": "Notice and Schedule for the End Semester Examination of Non-Promotional and Late Promoted Students",
@@ -37,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/2/1/notice-and-schedule-for-the-end-semester-examination-of-non-promotional-and-late-promoted-students",
         "isNew": true,
-        "id": 5
+        "id": 6
     },
     {
         "text": "Notice regarding shifting of End-Semester Lab Examination of 3rd Semester Students",
@@ -45,7 +53,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/27/notice-regarding-shifting-of-end-semester-theory-examination-of-1st-amp-5th-semester-students-8ebfh",
         "isNew": true,
-        "id": 6
+        "id": 7
     },
     {
         "text": "Notice regarding shifting of End-Semester Theory Examination of 1st & 5th Semester Students",
@@ -53,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/27/notice-regarding-shifting-of-end-semester-theory-examination-of-1st-amp-5th-semester-students",
         "isNew": true,
-        "id": 7
+        "id": 8
     },
     {
         "text": "Schedule for 1st Semester End-Semester Theory Examination",
@@ -61,21 +69,13 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w-bake9-a7bns",
         "isNew": true,
-        "id": 8
+        "id": 9
     },
     {
         "text": "Schedule for 5th Semester End-Semester Theory Examination",
         "date": "2026-01-08",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w-bake9",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Schedule for 3rd Semester End-Semester Theory Examination",
-        "date": "2026-01-08",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2026/1/8/schedule-for-7th-semester-end-semester-theory-examination-n679w",
         "isNew": true,
         "id": 10
     }
