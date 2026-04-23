@@ -1,11 +1,19 @@
 [
     {
+        "text": "Notice and Schedule for the Mid-Semester Examination of Non-Promotional and Late Promoted Students",
+        "date": "2026-04-23",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/23/notice-and-schedule-for-the-mid-semester-examination-of-non-promotional-and-late-promoted-students",
+        "isNew": true,
+        "id": 1
+    },
+    {
         "text": "Programme for 2nd Semester Mid-Semester Examination - April 2026",
         "date": "2026-04-09",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/9/programme-for-btech-8th-semester-mid-semester-examination-april-2026-2d82w-9jgjf-wds3l",
         "isNew": true,
-        "id": 1
+        "id": 2
     },
     {
         "text": "Programme for 4th Semester Mid-Semester Examination - April 2026",
@@ -13,7 +21,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/9/programme-for-btech-8th-semester-mid-semester-examination-april-2026-2d82w-9jgjf",
         "isNew": true,
-        "id": 2
+        "id": 3
     },
     {
         "text": "Programme for 6th Semester Mid-Semester Examination - April 2026",
@@ -21,7 +29,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/9/programme-for-btech-8th-semester-mid-semester-examination-april-2026-2d82w",
         "isNew": true,
-        "id": 3
+        "id": 4
     },
     {
         "text": "Programme for B.Tech. 8th Semester Mid-Semester Examination - April 2026",
@@ -29,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/9/programme-for-btech-8th-semester-mid-semester-examination-april-2026",
         "isNew": true,
-        "id": 4
+        "id": 5
     },
     {
         "text": "Notice regarding Revised Time Table",
@@ -37,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/4/4/notice-regarding-revised-time-table",
         "isNew": true,
-        "id": 5
+        "id": 6
     },
     {
         "text": "Notice regarding Class Suspension",
@@ -45,7 +53,7 @@
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/26/notice-regarding-class-suspension",
         "isNew": true,
-        "id": 6
+        "id": 7
     },
     {
         "text": "Mid Semester Review of Final Year Research Project",
@@ -53,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/25/6rzv9qppd7s4cf0sdo82zxldrnfbyo",
         "isNew": true,
-        "id": 7
+        "id": 8
     },
     {
         "text": "Notice regarding class suspension",
@@ -61,21 +69,13 @@
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/3/notice-regarding-class-suspension",
         "isNew": true,
-        "id": 8
+        "id": 9
     },
     {
         "text": "Notice regarding commencement of classes for Non Promotional and Late Promoted Students",
         "date": "2026-03-02",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/3/2/notice-regarding-commencement-of-classes-for-non-promotional-and-late-promoted-students",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Notice and Schedule for the End Semester Examination of Non-Promotional and Late Promoted Students",
-        "date": "2026-02-01",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2026/2/1/notice-and-schedule-for-the-end-semester-examination-of-non-promotional-and-late-promoted-students",
         "isNew": true,
         "id": 10
     }
