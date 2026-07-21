@@ -1,11 +1,27 @@
 [
     {
+        "text": "Notice and Schedule for Summer Quarter End-Semester Examination For B.Tech. 4th Year Students",
+        "date": "2026-07-21",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/21/notice-and-schedule-for-summer-quarter-end-semester-examination-for-btech-4th-year-students",
+        "isNew": true,
+        "id": 1
+    },
+    {
+        "text": "Notice regarding Summer Quarter Classes for 2nd Year Students",
+        "date": "2026-07-21",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/21/notice-regarding-summer-quarter-classes-for-2nd-year-students",
+        "isNew": true,
+        "id": 2
+    },
+    {
         "text": "Programme for B.Tech. 4th Year (Summer Quarter) Mid-Semester Examination, July 2026",
         "date": "2026-07-16",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/16/programme-for-btech-4th-year-summer-quarter-mid-semester-examination-july-2026",
         "isNew": true,
-        "id": 1
+        "id": 3
     },
     {
         "text": "2025 Batch UG Scholarship",
@@ -13,7 +29,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/16/2025-batch-ug-scholarship",
         "isNew": true,
-        "id": 2
+        "id": 4
     },
     {
         "text": "Notice regarding Summer Quarter Classes for 3rd Year Students",
@@ -21,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/4/notice-regarding-summer-quarter-classes-for-4th-year-students-5cygm",
         "isNew": true,
-        "id": 3
+        "id": 5
     },
     {
         "text": "Notice regarding Summer Quarter Classes for 4th Year Students",
@@ -29,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/4/notice-regarding-summer-quarter-classes-for-4th-year-students",
         "isNew": true,
-        "id": 4
+        "id": 6
     },
     {
         "text": "Notice regarding shifting of End-Semester Examination of 2nd and 6th Semester Students",
@@ -37,7 +53,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/5/27/notice-regarding-shifting-of-end-semester-examination-of-2nd-and-6th-semester-students",
         "isNew": true,
-        "id": 5
+        "id": 7
     },
     {
         "text": "Notice regarding Date Change",
@@ -45,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/5/25/notice-regarding-date-change",
         "isNew": true,
-        "id": 6
+        "id": 8
     },
     {
         "text": "Programme for 8th Semester End-Semester Examination - May 2026",
@@ -53,29 +69,13 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/5/14/programme-for-btech-2nd-semester-end-semester-examination-may-2026-65d5n-x7rp8",
         "isNew": true,
-        "id": 7
+        "id": 9
     },
     {
         "text": "Programme for 6th Semester End-Semester Examination - May 2026",
         "date": "2026-05-14",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/5/14/programme-for-btech-2nd-semester-end-semester-examination-may-2026-65d5n",
-        "isNew": true,
-        "id": 8
-    },
-    {
-        "text": "Programme for 4th Semester End-Semester Examination - May 2026",
-        "date": "2026-05-14",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2026/5/14/programme-for-btech-2nd-semester-end-semester-examination-may-2026",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Programme for 2nd Semester End-Semester Examination - May 2026",
-        "date": "2026-05-14",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2026/5/14/programme-for-btech-2nd-semester-end-semester-examination-may-2026-c7xkt",
         "isNew": true,
         "id": 10
     }
