@@ -1,11 +1,19 @@
 [
     {
+        "text": "Notice regarding commencement of Classes for Non-Promotional and Late Promoted Students",
+        "date": "2026-10-02",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/2/notice-regarding-commencement-of-classes-for-non-promotional-and-late-promoted-students",
+        "isNew": true,
+        "id": 1
+    },
+    {
         "text": "Notice regarding Summer Quarter End-Semester Examination for Non-Promotional and Late Promoted Students",
         "date": "2026-09-03",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/9/3/notice-regarding-summer-quarter-end-semester-examination-for-non-promotional-and-late-promoted-students",
         "isNew": true,
-        "id": 1
+        "id": 2
     },
     {
         "text": "Notice and Schedule for Summer Quarter End Semester Examination For BTech, BCA And MCA Students",
@@ -13,7 +21,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/8/20/nzat97b14jr6o0g4306hcefhu6w4a9",
         "isNew": true,
-        "id": 2
+        "id": 3
     },
     {
         "text": "Notice regarding Summer Quarter Mid-Semester Examination for Non-Promotional and Late Promoted Students",
@@ -21,7 +29,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/8/12/notice-regarding-summer-quarter-mid-semester-examination-for-non-promotional-and-late-promoted-students",
         "isNew": true,
-        "id": 3
+        "id": 4
     },
     {
         "text": "Notice and Schedule for Summer Quarter Mid Semester Examination For BTech, BCA And MCA Students",
@@ -29,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/8/4/notice-and-schedule-for-summer-quarter-mid-semester-examination-for-btech-bca-and-mca-students",
         "isNew": true,
-        "id": 4
+        "id": 5
     },
     {
         "text": "Notice regarding Commencement of Regular Classes for 3rd Semester Students",
@@ -37,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/29/notice-regarding-commencement-of-regular-classes-for-7th-semester-students-2hn4m-spmnj",
         "isNew": true,
-        "id": 5
+        "id": 6
     },
     {
         "text": "Notice regarding Commencement of Regular Classes for 5th Semester Students",
@@ -45,7 +53,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/29/notice-regarding-commencement-of-regular-classes-for-7th-semester-students-2hn4m",
         "isNew": true,
-        "id": 6
+        "id": 7
     },
     {
         "text": "Notice regarding Commencement of Regular Classes for 7th Semester Students",
@@ -53,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/29/notice-regarding-commencement-of-regular-classes-for-7th-semester-students",
         "isNew": true,
-        "id": 7
+        "id": 8
     },
     {
         "text": "Notice regarding Summer Quarter Classes for 1st Year Students",
@@ -61,21 +69,13 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/22/notice-regarding-summer-quarter-classes-for-non-promotional-and-late-promoted-students-9rtm9",
         "isNew": true,
-        "id": 8
+        "id": 9
     },
     {
         "text": "Notice regarding Summer Quarter Classes for Non-Promotional and Late Promoted Students",
         "date": "2026-07-22",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/22/notice-regarding-summer-quarter-classes-for-non-promotional-and-late-promoted-students",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Notice and Schedule for Summer Quarter End-Semester Examination For B.Tech. 4th Year Students",
-        "date": "2026-07-21",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2026/7/21/notice-and-schedule-for-summer-quarter-end-semester-examination-for-btech-4th-year-students",
         "isNew": true,
         "id": 10
     }
