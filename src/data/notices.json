@@ -1,11 +1,19 @@
 [
     {
+        "text": "Notice regarding resumption of regular classes",
+        "date": "2026-11-20",
+        "type": "academic",
+        "link": "https://www.soa.ac.in/iter-news-and-events/2026/11/20/notice-regarding-resumption-of-regular-classes",
+        "isNew": true,
+        "id": 1
+    },
+    {
         "text": "Notice regarding shifting of affected portion of Mid-Semester Examination",
         "date": "2026-10-28",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/28/notice-regarding-shifting-of-affected-portion-of-mid-semester-examination",
         "isNew": true,
-        "id": 1
+        "id": 2
     },
     {
         "text": "Notice regarding suspension of Academic Activity due to cyclonic storm Arnab",
@@ -13,7 +21,7 @@
         "type": "admin",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/27/notice-regarding-suspension-of-academic-activity",
         "isNew": true,
-        "id": 2
+        "id": 3
     },
     {
         "text": "Programme for 1st Semester Mid-Semester Examination, October 2026",
@@ -21,7 +29,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026-9yej5-a9rcb-s8d7r",
         "isNew": true,
-        "id": 3
+        "id": 4
     },
     {
         "text": "Programme for 3rd Semester Mid-Semester Examination, October 2026",
@@ -29,7 +37,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026-9yej5-a9rcb",
         "isNew": true,
-        "id": 4
+        "id": 5
     },
     {
         "text": "Programme for 5th Semester Mid-Semester Examination, October 2026",
@@ -37,7 +45,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026-9yej5",
         "isNew": true,
-        "id": 5
+        "id": 6
     },
     {
         "text": "Programme for B.Tech. 7th Semester Mid-Semester Examination, October 2026",
@@ -45,7 +53,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026",
         "isNew": true,
-        "id": 6
+        "id": 7
     },
     {
         "text": "Programme for B.Tech. 1st Semester Mid-Semester Examination, October 2026",
@@ -53,7 +61,7 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026-9yej5-a9rcb-s8d7r",
         "isNew": true,
-        "id": 7
+        "id": 8
     },
     {
         "text": "Programme for B.Tech. 3rd Semester Mid-Semester Examination, October 2026",
@@ -61,21 +69,13 @@
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026-9yej5-a9rcb",
         "isNew": true,
-        "id": 8
+        "id": 9
     },
     {
         "text": "Programme for B.Tech. 5th Semester Mid-Semester Examination, October 2026",
         "date": "2026-10-19",
         "type": "academic",
         "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/19/programme-for-btech-7th-semester-mid-semester-examination-october-2026-9yej5",
-        "isNew": true,
-        "id": 9
-    },
-    {
-        "text": "Notice regarding ID-card for 2026 Admission Batch",
-        "date": "2026-10-16",
-        "type": "academic",
-        "link": "https://www.soa.ac.in/iter-news-and-events/2026/10/16/notice-regarding-id-card-for-2026-admission-batch",
         "isNew": true,
         "id": 10
     }
